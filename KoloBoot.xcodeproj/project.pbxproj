@@ -7,20 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59E04D97206FFD9E00AB5C2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D96206FFD9E00AB5C2B /* AppDelegate.m */; };
+		59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */; };
 		59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D99206FFD9E00AB5C2B /* ViewController.mm */; };
 		59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E04D9B206FFD9E00AB5C2B /* Main.storyboard */; };
 		59E04D9F206FFD9E00AB5C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59E04D9E206FFD9E00AB5C2B /* Assets.xcassets */; };
 		59E04DA2206FFD9E00AB5C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E04DA0206FFD9E00AB5C2B /* LaunchScreen.storyboard */; };
 		59E04DA5206FFD9E00AB5C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E04DA4206FFD9E00AB5C2B /* main.m */; };
-		59F51AD72073861E004AFBE3 /* firebase_storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AD52073861D004AFBE3 /* firebase_storage.framework */; };
-		59F51AD82073861E004AFBE3 /* firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AD62073861E004AFBE3 /* firebase.framework */; };
+		59F51AE120738CF2004AFBE3 /* restclient.cc in Sources */ = {isa = PBXBuildFile; fileRef = 59F51ADD20738CF1004AFBE3 /* restclient.cc */; };
+		59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */ = {isa = PBXBuildFile; fileRef = 59F51ADE20738CF1004AFBE3 /* helpers.cc */; };
+		59F51AE320738CF2004AFBE3 /* connection.cc in Sources */ = {isa = PBXBuildFile; fileRef = 59F51ADF20738CF1004AFBE3 /* connection.cc */; };
+		59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F51AE820738CFA004AFBE3 /* jsoncpp.cpp */; };
+		59F51AEF20738E04004AFBE3 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AEB20738E03004AFBE3 /* libcrypto.a */; };
+		59F51AF020738E04004AFBE3 /* libnghttp2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AEC20738E04004AFBE3 /* libnghttp2.a */; };
+		59F51AF120738E04004AFBE3 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AED20738E04004AFBE3 /* libssl.a */; };
+		59F51AF220738E04004AFBE3 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AEE20738E04004AFBE3 /* libcurl.a */; };
+		59F51AF420738E5B004AFBE3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AF320738E5A004AFBE3 /* libz.tbd */; };
+		59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B0020738F5B004AFBE3 /* helper_oncpp.cc */; };
+		59F51B0C20744953004AFBE3 /* firebase_database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51B0A20744950004AFBE3 /* firebase_database.framework */; };
+		59F51B0D20744953004AFBE3 /* firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51B0B20744953004AFBE3 /* firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		59E04D92206FFD9E00AB5C2B /* KoloBoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoloBoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E04D95206FFD9E00AB5C2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		59E04D96206FFD9E00AB5C2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		59E04D98206FFD9E00AB5C2B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		59E04D99206FFD9E00AB5C2B /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		59E04D9C206FFD9E00AB5C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,8 +38,25 @@
 		59E04DA1206FFD9E00AB5C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59E04DA3206FFD9E00AB5C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59E04DA4206FFD9E00AB5C2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		59F51AD52073861D004AFBE3 /* firebase_storage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_storage.framework; sourceTree = "<group>"; };
-		59F51AD62073861E004AFBE3 /* firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase.framework; sourceTree = "<group>"; };
+		59F51ADA20738CF1004AFBE3 /* connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = connection.h; sourceTree = "<group>"; };
+		59F51ADB20738CF1004AFBE3 /* restclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = restclient.h; sourceTree = "<group>"; };
+		59F51ADC20738CF1004AFBE3 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		59F51ADD20738CF1004AFBE3 /* restclient.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = restclient.cc; sourceTree = "<group>"; };
+		59F51ADE20738CF1004AFBE3 /* helpers.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cc; sourceTree = "<group>"; };
+		59F51ADF20738CF1004AFBE3 /* connection.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = connection.cc; sourceTree = "<group>"; };
+		59F51AE020738CF1004AFBE3 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		59F51AE620738CFA004AFBE3 /* json-forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "json-forwards.h"; sourceTree = "<group>"; };
+		59F51AE720738CFA004AFBE3 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		59F51AE820738CFA004AFBE3 /* jsoncpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsoncpp.cpp; sourceTree = "<group>"; };
+		59F51AEB20738E03004AFBE3 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = libs/libcrypto.a; sourceTree = SOURCE_ROOT; };
+		59F51AEC20738E04004AFBE3 /* libnghttp2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnghttp2.a; path = libs/libnghttp2.a; sourceTree = SOURCE_ROOT; };
+		59F51AED20738E04004AFBE3 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = libs/libssl.a; sourceTree = SOURCE_ROOT; };
+		59F51AEE20738E04004AFBE3 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = libs/libcurl.a; sourceTree = SOURCE_ROOT; };
+		59F51AF320738E5A004AFBE3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		59F51B0020738F5B004AFBE3 /* helper_oncpp.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helper_oncpp.cc; sourceTree = "<group>"; };
+		59F51B0120738F5B004AFBE3 /* helper_oncpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helper_oncpp.h; sourceTree = "<group>"; };
+		59F51B0A20744950004AFBE3 /* firebase_database.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_database.framework; sourceTree = "<group>"; };
+		59F51B0B20744953004AFBE3 /* firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,8 +64,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59F51AD72073861E004AFBE3 /* firebase_storage.framework in Frameworks */,
-				59F51AD82073861E004AFBE3 /* firebase.framework in Frameworks */,
+				59F51AF420738E5B004AFBE3 /* libz.tbd in Frameworks */,
+				59F51AEF20738E04004AFBE3 /* libcrypto.a in Frameworks */,
+				59F51B0C20744953004AFBE3 /* firebase_database.framework in Frameworks */,
+				59F51AF020738E04004AFBE3 /* libnghttp2.a in Frameworks */,
+				59F51AF120738E04004AFBE3 /* libssl.a in Frameworks */,
+				59F51B0D20744953004AFBE3 /* firebase.framework in Frameworks */,
+				59F51AF220738E04004AFBE3 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +97,10 @@
 		59E04D94206FFD9E00AB5C2B /* KoloBoot */ = {
 			isa = PBXGroup;
 			children = (
+				59F51AFF20738F53004AFBE3 /* Helper */,
+				59F51AEA20738CFD004AFBE3 /* Library */,
 				59E04D95206FFD9E00AB5C2B /* AppDelegate.h */,
-				59E04D96206FFD9E00AB5C2B /* AppDelegate.m */,
+				59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */,
 				59E04D98206FFD9E00AB5C2B /* ViewController.h */,
 				59E04D99206FFD9E00AB5C2B /* ViewController.mm */,
 				59E04D9B206FFD9E00AB5C2B /* Main.storyboard */,
@@ -81,10 +115,65 @@
 		59F51AD4207385E6004AFBE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59F51AD52073861D004AFBE3 /* firebase_storage.framework */,
-				59F51AD62073861E004AFBE3 /* firebase.framework */,
+				59F51B0A20744950004AFBE3 /* firebase_database.framework */,
+				59F51B0B20744953004AFBE3 /* firebase.framework */,
+				59F51AF320738E5A004AFBE3 /* libz.tbd */,
+				59F51AEB20738E03004AFBE3 /* libcrypto.a */,
+				59F51AEE20738E04004AFBE3 /* libcurl.a */,
+				59F51AEC20738E04004AFBE3 /* libnghttp2.a */,
+				59F51AED20738E04004AFBE3 /* libssl.a */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		59F51AD920738CF1004AFBE3 /* RestClientCpp */ = {
+			isa = PBXGroup;
+			children = (
+				59F51ADA20738CF1004AFBE3 /* connection.h */,
+				59F51ADB20738CF1004AFBE3 /* restclient.h */,
+				59F51ADC20738CF1004AFBE3 /* version.h */,
+				59F51ADD20738CF1004AFBE3 /* restclient.cc */,
+				59F51ADE20738CF1004AFBE3 /* helpers.cc */,
+				59F51ADF20738CF1004AFBE3 /* connection.cc */,
+				59F51AE020738CF1004AFBE3 /* helpers.h */,
+			);
+			path = RestClientCpp;
+			sourceTree = "<group>";
+		};
+		59F51AE420738CFA004AFBE3 /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				59F51AE520738CFA004AFBE3 /* json */,
+				59F51AE820738CFA004AFBE3 /* jsoncpp.cpp */,
+			);
+			path = jsoncpp;
+			sourceTree = "<group>";
+		};
+		59F51AE520738CFA004AFBE3 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				59F51AE620738CFA004AFBE3 /* json-forwards.h */,
+				59F51AE720738CFA004AFBE3 /* json.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		59F51AEA20738CFD004AFBE3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				59F51AE420738CFA004AFBE3 /* jsoncpp */,
+				59F51AD920738CF1004AFBE3 /* RestClientCpp */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		59F51AFF20738F53004AFBE3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				59F51B0020738F5B004AFBE3 /* helper_oncpp.cc */,
+				59F51B0120738F5B004AFBE3 /* helper_oncpp.h */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */,
+				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
-				59E04D97206FFD9E00AB5C2B /* AppDelegate.m in Sources */,
+				59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */,
+				59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */,
+				59F51AE120738CF2004AFBE3 /* restclient.cc in Sources */,
+				59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */,
+				59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +394,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INFOPLIST_FILE = KoloBoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -318,8 +414,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INFOPLIST_FILE = KoloBoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
