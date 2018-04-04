@@ -43,12 +43,90 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="KoloBoot" id="vb7-l8-nmi">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="szx-cG-uBQ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="szx-cG-uBQ">
+                            <connections>
+                                <action selector="addProjectAction:" destination="BYZ-38-t0r" id="JHc-GK-RX3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="480.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Create Project Controller-->
+        <scene sceneID="RIA-rz-Ev6">
+            <objects>
+                <viewController storyboardIdentifier="CreateProjectController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GbE-MV-A8r" customClass="CreateProjectController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xgk-M7-miw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbh-96-wWQ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="280"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9DW-4U-pp7">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVU-Vt-n3y">
+                                                <rect key="frame" x="8" y="30" width="304" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="tLd-G1-I0U"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Base URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xhe-bC-sQQ">
+                                                <rect key="frame" x="8" y="87" width="304" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="Z4C-XJ-KUL"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="mVU-Vt-n3y" secondAttribute="trailing" constant="8" id="BEe-R5-5Je"/>
+                                            <constraint firstItem="Xhe-bC-sQQ" firstAttribute="trailing" secondItem="mVU-Vt-n3y" secondAttribute="trailing" id="Di0-JM-OHG"/>
+                                            <constraint firstItem="mVU-Vt-n3y" firstAttribute="top" secondItem="9DW-4U-pp7" secondAttribute="top" constant="30" id="VKz-2d-kvT"/>
+                                            <constraint firstItem="mVU-Vt-n3y" firstAttribute="leading" secondItem="9DW-4U-pp7" secondAttribute="leading" constant="8" id="Vpd-jY-Cwt"/>
+                                            <constraint firstItem="Xhe-bC-sQQ" firstAttribute="top" secondItem="mVU-Vt-n3y" secondAttribute="bottom" constant="22" id="Wrx-zu-0yV"/>
+                                            <constraint firstItem="Xhe-bC-sQQ" firstAttribute="leading" secondItem="mVU-Vt-n3y" secondAttribute="leading" id="ynr-VV-bO0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9DW-4U-pp7" secondAttribute="bottom" id="Aqk-ID-yao"/>
+                                    <constraint firstAttribute="trailing" secondItem="9DW-4U-pp7" secondAttribute="trailing" id="K47-oc-NvF"/>
+                                    <constraint firstAttribute="height" constant="280" id="KkP-fH-UPL"/>
+                                    <constraint firstItem="9DW-4U-pp7" firstAttribute="top" secondItem="dbh-96-wWQ" secondAttribute="top" id="PIb-CW-gb0"/>
+                                    <constraint firstItem="9DW-4U-pp7" firstAttribute="leading" secondItem="dbh-96-wWQ" secondAttribute="leading" id="Yfn-fg-Grl"/>
+                                    <constraint firstItem="9DW-4U-pp7" firstAttribute="height" secondItem="dbh-96-wWQ" secondAttribute="height" id="jhg-tE-E81"/>
+                                    <constraint firstItem="9DW-4U-pp7" firstAttribute="width" secondItem="dbh-96-wWQ" secondAttribute="width" id="lhd-J2-vf9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xF6-U9-MWi" firstAttribute="trailing" secondItem="dbh-96-wWQ" secondAttribute="trailing" id="KWz-Y1-b62"/>
+                            <constraint firstItem="dbh-96-wWQ" firstAttribute="leading" secondItem="xF6-U9-MWi" secondAttribute="leading" id="NBp-ns-EKa"/>
+                            <constraint firstItem="dbh-96-wWQ" firstAttribute="top" secondItem="xF6-U9-MWi" secondAttribute="top" id="llw-yR-zNN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xF6-U9-MWi"/>
+                    </view>
+                    <connections>
+                        <outlet property="baseUrlField" destination="Xhe-bC-sQQ" id="ve6-7n-0q1"/>
+                        <outlet property="contentView" destination="9DW-4U-pp7" id="I24-0E-OUn"/>
+                        <outlet property="nameField" destination="mVU-Vt-n3y" id="KaO-hx-ASC"/>
+                        <outlet property="scrollView" destination="dbh-96-wWQ" id="Nnt-UQ-jKq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slY-Ts-Frj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.625" y="133.09859154929578"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gpN-uP-GYb">

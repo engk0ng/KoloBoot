@@ -7,6 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "firebase_connection.h"
+
+struct FirebaseAccess {
+    FirebaseConnection con;
+    const void *get_connection_ptr(FirebaseType type) {
+        return con.get_connection(type);
+    }
+};
 
 @interface AppDelegate ()
 
@@ -17,9 +25,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _serverConnect = new FirebaseAccess;
     return YES;
 }
 
++ (AppDelegate *)sharedAppdelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+- (const void *)get_firebase_connector:(FirebaseType)tp {
+    return _serverConnect->get_connection_ptr(tp);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -45,6 +61,9 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    if (_serverConnect) {
+        delete _serverConnect;
+    }
 }
 
 

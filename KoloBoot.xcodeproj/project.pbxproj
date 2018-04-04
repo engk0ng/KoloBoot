@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1519A3B5481A50DFA8367093 /* libPods-KoloBoot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */; };
 		59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */; };
 		59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D99206FFD9E00AB5C2B /* ViewController.mm */; };
 		59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E04D9B206FFD9E00AB5C2B /* Main.storyboard */; };
@@ -25,9 +26,19 @@
 		59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B0020738F5B004AFBE3 /* helper_oncpp.cc */; };
 		59F51B0C20744953004AFBE3 /* firebase_database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51B0A20744950004AFBE3 /* firebase_database.framework */; };
 		59F51B0D20744953004AFBE3 /* firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51B0B20744953004AFBE3 /* firebase.framework */; };
+		59F51B1520744C09004AFBE3 /* firebase_database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1020744C08004AFBE3 /* firebase_database.cpp */; };
+		59F51B1620744C09004AFBE3 /* firebase_basic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1220744C08004AFBE3 /* firebase_basic.cpp */; };
+		59F51B1720744C09004AFBE3 /* firebase_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1420744C09004AFBE3 /* firebase_connection.cpp */; };
+		59F51B1A20744FDF004AFBE3 /* helper_onc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1920744FDF004AFBE3 /* helper_onc.c */; };
+		59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */; };
+		59F51B2E207470F6004AFBE3 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B2A207470F6004AFBE3 /* WYStoryboardPopoverSegue.m */; };
+		59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B2D207470F6004AFBE3 /* WYPopoverController.m */; };
+		59F51B3420747455004AFBE3 /* CreateProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B3320747455004AFBE3 /* CreateProjectController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23FBFE2418DFF8B808F21824 /* Pods-KoloBoot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoloBoot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot.debug.xcconfig"; sourceTree = "<group>"; };
+		43BA6EFDC29602E0D81183BA /* Pods-KoloBoot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoloBoot.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot.release.xcconfig"; sourceTree = "<group>"; };
 		59E04D92206FFD9E00AB5C2B /* KoloBoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoloBoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E04D95206FFD9E00AB5C2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -57,6 +68,22 @@
 		59F51B0120738F5B004AFBE3 /* helper_oncpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helper_oncpp.h; sourceTree = "<group>"; };
 		59F51B0A20744950004AFBE3 /* firebase_database.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_database.framework; sourceTree = "<group>"; };
 		59F51B0B20744953004AFBE3 /* firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase.framework; sourceTree = "<group>"; };
+		59F51B0F20744C08004AFBE3 /* firebase_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firebase_connection.h; sourceTree = "<group>"; };
+		59F51B1020744C08004AFBE3 /* firebase_database.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = firebase_database.cpp; sourceTree = "<group>"; };
+		59F51B1120744C08004AFBE3 /* firebase_database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firebase_database.h; sourceTree = "<group>"; };
+		59F51B1220744C08004AFBE3 /* firebase_basic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = firebase_basic.cpp; sourceTree = "<group>"; };
+		59F51B1320744C09004AFBE3 /* firebase_basic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firebase_basic.h; sourceTree = "<group>"; };
+		59F51B1420744C09004AFBE3 /* firebase_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = firebase_connection.cpp; sourceTree = "<group>"; };
+		59F51B1820744FDF004AFBE3 /* helper_onc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helper_onc.h; sourceTree = "<group>"; };
+		59F51B1920744FDF004AFBE3 /* helper_onc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = helper_onc.c; sourceTree = "<group>"; };
+		59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		59F51B2A207470F6004AFBE3 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		59F51B2B207470F6004AFBE3 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		59F51B2C207470F6004AFBE3 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		59F51B2D207470F6004AFBE3 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		59F51B3220747455004AFBE3 /* CreateProjectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateProjectController.h; sourceTree = "<group>"; };
+		59F51B3320747455004AFBE3 /* CreateProjectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateProjectController.m; sourceTree = "<group>"; };
+		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +98,7 @@
 				59F51AF120738E04004AFBE3 /* libssl.a in Frameworks */,
 				59F51B0D20744953004AFBE3 /* firebase.framework in Frameworks */,
 				59F51AF220738E04004AFBE3 /* libcurl.a in Frameworks */,
+				1519A3B5481A50DFA8367093 /* libPods-KoloBoot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +111,7 @@
 				59F51AD4207385E6004AFBE3 /* Frameworks */,
 				59E04D94206FFD9E00AB5C2B /* KoloBoot */,
 				59E04D93206FFD9E00AB5C2B /* Products */,
+				8293D06B07D754DEBC785A84 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,16 +126,18 @@
 		59E04D94206FFD9E00AB5C2B /* KoloBoot */ = {
 			isa = PBXGroup;
 			children = (
+				59F51B3020747424004AFBE3 /* Controller */,
+				59F51B21207459AA004AFBE3 /* Custom */,
+				59F51B0E20744BE0004AFBE3 /* Firebase */,
 				59F51AFF20738F53004AFBE3 /* Helper */,
 				59F51AEA20738CFD004AFBE3 /* Library */,
 				59E04D95206FFD9E00AB5C2B /* AppDelegate.h */,
 				59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */,
-				59E04D98206FFD9E00AB5C2B /* ViewController.h */,
-				59E04D99206FFD9E00AB5C2B /* ViewController.mm */,
 				59E04D9B206FFD9E00AB5C2B /* Main.storyboard */,
 				59E04D9E206FFD9E00AB5C2B /* Assets.xcassets */,
 				59E04DA0206FFD9E00AB5C2B /* LaunchScreen.storyboard */,
 				59E04DA3206FFD9E00AB5C2B /* Info.plist */,
+				59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */,
 				59E04DA4206FFD9E00AB5C2B /* main.m */,
 			);
 			path = KoloBoot;
@@ -122,6 +153,7 @@
 				59F51AEE20738E04004AFBE3 /* libcurl.a */,
 				59F51AEC20738E04004AFBE3 /* libnghttp2.a */,
 				59F51AED20738E04004AFBE3 /* libssl.a */,
+				F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -161,6 +193,7 @@
 		59F51AEA20738CFD004AFBE3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				59F51B29207470F6004AFBE3 /* WYPopoverController */,
 				59F51AE420738CFA004AFBE3 /* jsoncpp */,
 				59F51AD920738CF1004AFBE3 /* RestClientCpp */,
 			);
@@ -172,8 +205,85 @@
 			children = (
 				59F51B0020738F5B004AFBE3 /* helper_oncpp.cc */,
 				59F51B0120738F5B004AFBE3 /* helper_oncpp.h */,
+				59F51B1820744FDF004AFBE3 /* helper_onc.h */,
+				59F51B1920744FDF004AFBE3 /* helper_onc.c */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		59F51B0E20744BE0004AFBE3 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				59F51B1220744C08004AFBE3 /* firebase_basic.cpp */,
+				59F51B1320744C09004AFBE3 /* firebase_basic.h */,
+				59F51B1420744C09004AFBE3 /* firebase_connection.cpp */,
+				59F51B0F20744C08004AFBE3 /* firebase_connection.h */,
+				59F51B1020744C08004AFBE3 /* firebase_database.cpp */,
+				59F51B1120744C08004AFBE3 /* firebase_database.h */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		59F51B21207459AA004AFBE3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				59F51B22207459B4004AFBE3 /* UIView */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		59F51B22207459B4004AFBE3 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		59F51B29207470F6004AFBE3 /* WYPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				59F51B2A207470F6004AFBE3 /* WYStoryboardPopoverSegue.m */,
+				59F51B2B207470F6004AFBE3 /* WYPopoverController.h */,
+				59F51B2C207470F6004AFBE3 /* WYStoryboardPopoverSegue.h */,
+				59F51B2D207470F6004AFBE3 /* WYPopoverController.m */,
+			);
+			path = WYPopoverController;
+			sourceTree = "<group>";
+		};
+		59F51B3020747424004AFBE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59F51B3520747DD4004AFBE3 /* Home */,
+				59F51B312074742B004AFBE3 /* Create Project */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59F51B312074742B004AFBE3 /* Create Project */ = {
+			isa = PBXGroup;
+			children = (
+				59F51B3220747455004AFBE3 /* CreateProjectController.h */,
+				59F51B3320747455004AFBE3 /* CreateProjectController.m */,
+			);
+			path = "Create Project";
+			sourceTree = "<group>";
+		};
+		59F51B3520747DD4004AFBE3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				59E04D98206FFD9E00AB5C2B /* ViewController.h */,
+				59E04D99206FFD9E00AB5C2B /* ViewController.mm */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8293D06B07D754DEBC785A84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23FBFE2418DFF8B808F21824 /* Pods-KoloBoot.debug.xcconfig */,
+				43BA6EFDC29602E0D81183BA /* Pods-KoloBoot.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +293,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59E04DA8206FFD9E00AB5C2B /* Build configuration list for PBXNativeTarget "KoloBoot" */;
 			buildPhases = (
+				87EE5CEB881FAEB309536DA3 /* [CP] Check Pods Manifest.lock */,
 				59E04D8E206FFD9E00AB5C2B /* Sources */,
 				59E04D8F206FFD9E00AB5C2B /* Frameworks */,
 				59E04D90206FFD9E00AB5C2B /* Resources */,
+				CF8235E8A83A6A680CC982F5 /* [CP] Embed Pods Frameworks */,
+				EF3180497F2BC55F8B8B427E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,25 +349,84 @@
 			files = (
 				59E04DA2206FFD9E00AB5C2B /* LaunchScreen.storyboard in Resources */,
 				59E04D9F206FFD9E00AB5C2B /* Assets.xcassets in Resources */,
+				59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */,
 				59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		87EE5CEB881FAEB309536DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoloBoot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF8235E8A83A6A680CC982F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF3180497F2BC55F8B8B427E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		59E04D8E206FFD9E00AB5C2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F51B2E207470F6004AFBE3 /* WYStoryboardPopoverSegue.m in Sources */,
+				59F51B1A20744FDF004AFBE3 /* helper_onc.c in Sources */,
 				59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */,
+				59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */,
 				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
 				59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */,
 				59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */,
 				59F51AE120738CF2004AFBE3 /* restclient.cc in Sources */,
 				59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */,
+				59F51B1620744C09004AFBE3 /* firebase_basic.cpp in Sources */,
 				59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */,
+				59F51B1720744C09004AFBE3 /* firebase_connection.cpp in Sources */,
+				59F51B1520744C09004AFBE3 /* firebase_database.cpp in Sources */,
+				59F51B3420747455004AFBE3 /* CreateProjectController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +558,7 @@
 		};
 		59E04DA9206FFD9E00AB5C2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23FBFE2418DFF8B808F21824 /* Pods-KoloBoot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,10 +567,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/include",
+				);
 				INFOPLIST_FILE = KoloBoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -406,6 +585,7 @@
 		};
 		59E04DAA206FFD9E00AB5C2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43BA6EFDC29602E0D81183BA /* Pods-KoloBoot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -414,10 +594,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/include",
+				);
 				INFOPLIST_FILE = KoloBoot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libs";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

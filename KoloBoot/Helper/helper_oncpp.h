@@ -62,12 +62,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
-
-typedef enum _type {
-    STORAGE = 0,
-    DATABASE,
-    AUTH
-}FirebaseType;
+#include "helper_onc.h"
 
 namespace Koloboot {
     namespace Helper {
