@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <map>
+#import <string>
+
+@protocol CreateProjectControllerDelegate <NSObject>
+@optional
+- (void)saveDataProject:(std::map<std::string, std::string>)dta;
+@end
 
 @interface CreateProjectController : UIViewController <UITextFieldDelegate>
-
+@property (weak) id<CreateProjectControllerDelegate> delegate;
 @property (nonatomic, weak) IBOutlet UITextField *baseUrlField;
 @property (nonatomic, weak) IBOutlet UITextField *nameField;
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "helper_onc.h"
+#import "JDStatusBarNotification.h"
+#import "TWMessageBarManager.h"
 
 struct FirebaseAccess;
 
@@ -17,5 +19,6 @@ struct FirebaseAccess;
 @property (nonatomic, assign) struct FirebaseAccess *serverConnect;
 + (AppDelegate *)sharedAppdelegate;
 - (const void *)get_firebase_connector:(FirebaseType)tp;
+- (void)messageNotification:(NSString *)title description:(NSString *)description visible:(BOOL)visible delay:(NSTimeInterval)delay type:(TWMessageBarMessageType)type errorCode:(NSInteger)errorcode;
 @end
 

@@ -33,7 +33,19 @@
 		59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */; };
 		59F51B2E207470F6004AFBE3 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B2A207470F6004AFBE3 /* WYStoryboardPopoverSegue.m */; };
 		59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B2D207470F6004AFBE3 /* WYPopoverController.m */; };
-		59F51B3420747455004AFBE3 /* CreateProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B3320747455004AFBE3 /* CreateProjectController.m */; };
+		59F51B3420747455004AFBE3 /* CreateProjectController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B3320747455004AFBE3 /* CreateProjectController.mm */; };
+		59F5D104207992D800E961CE /* NSString+CppStr.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D103207992D800E961CE /* NSString+CppStr.mm */; };
+		59F5D10C20799B7A00E961CE /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D10620799B7A00E961CE /* JDStatusBarNotification.m */; };
+		59F5D10D20799B7A00E961CE /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D10820799B7A00E961CE /* JDStatusBarView.m */; };
+		59F5D10E20799B7A00E961CE /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D10B20799B7A00E961CE /* JDStatusBarStyle.m */; };
+		59F5D11920799B8800E961CE /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D11020799B8800E961CE /* TWMessageBarManager.m */; };
+		59F5D11A20799B8800E961CE /* icon-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11220799B8800E961CE /* icon-info@2x.png */; };
+		59F5D11B20799B8800E961CE /* icon-error.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11320799B8800E961CE /* icon-error.png */; };
+		59F5D11C20799B8800E961CE /* icon-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11420799B8800E961CE /* icon-info.png */; };
+		59F5D11D20799B8800E961CE /* icon-success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11520799B8800E961CE /* icon-success@2x.png */; };
+		59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11620799B8800E961CE /* icon-error@2x.png */; };
+		59F5D11F20799B8800E961CE /* icon-success.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11720799B8800E961CE /* icon-success.png */; };
+		59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D1212079E1FE00E961CE /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +94,25 @@
 		59F51B2C207470F6004AFBE3 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
 		59F51B2D207470F6004AFBE3 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
 		59F51B3220747455004AFBE3 /* CreateProjectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateProjectController.h; sourceTree = "<group>"; };
-		59F51B3320747455004AFBE3 /* CreateProjectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateProjectController.m; sourceTree = "<group>"; };
+		59F51B3320747455004AFBE3 /* CreateProjectController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CreateProjectController.mm; sourceTree = "<group>"; };
+		59F5D102207992D800E961CE /* NSString+CppStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CppStr.h"; sourceTree = "<group>"; };
+		59F5D103207992D800E961CE /* NSString+CppStr.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+CppStr.mm"; sourceTree = "<group>"; };
+		59F5D10620799B7A00E961CE /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
+		59F5D10720799B7A00E961CE /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
+		59F5D10820799B7A00E961CE /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
+		59F5D10920799B7A00E961CE /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
+		59F5D10A20799B7A00E961CE /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
+		59F5D10B20799B7A00E961CE /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
+		59F5D11020799B8800E961CE /* TWMessageBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMessageBarManager.m; sourceTree = "<group>"; };
+		59F5D11220799B8800E961CE /* icon-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info@2x.png"; sourceTree = "<group>"; };
+		59F5D11320799B8800E961CE /* icon-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error.png"; sourceTree = "<group>"; };
+		59F5D11420799B8800E961CE /* icon-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info.png"; sourceTree = "<group>"; };
+		59F5D11520799B8800E961CE /* icon-success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success@2x.png"; sourceTree = "<group>"; };
+		59F5D11620799B8800E961CE /* icon-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error@2x.png"; sourceTree = "<group>"; };
+		59F5D11720799B8800E961CE /* icon-success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success.png"; sourceTree = "<group>"; };
+		59F5D11820799B8800E961CE /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageBarManager.h; sourceTree = "<group>"; };
+		59F5D1202079E1FE00E961CE /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		59F5D1212079E1FE00E961CE /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,6 +223,8 @@
 		59F51AEA20738CFD004AFBE3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D10F20799B8800E961CE /* TWMessageBarManager */,
+				59F5D10520799B7A00E961CE /* JDStatusBarNotification */,
 				59F51B29207470F6004AFBE3 /* WYPopoverController */,
 				59F51AE420738CFA004AFBE3 /* jsoncpp */,
 				59F51AD920738CF1004AFBE3 /* RestClientCpp */,
@@ -227,6 +259,7 @@
 		59F51B21207459AA004AFBE3 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D101207992BF00E961CE /* Class */,
 				59F51B22207459B4004AFBE3 /* UIView */,
 			);
 			path = Custom;
@@ -235,6 +268,8 @@
 		59F51B22207459B4004AFBE3 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D1202079E1FE00E961CE /* ProgressView.h */,
+				59F5D1212079E1FE00E961CE /* ProgressView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -263,7 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				59F51B3220747455004AFBE3 /* CreateProjectController.h */,
-				59F51B3320747455004AFBE3 /* CreateProjectController.m */,
+				59F51B3320747455004AFBE3 /* CreateProjectController.mm */,
 			);
 			path = "Create Project";
 			sourceTree = "<group>";
@@ -275,6 +310,51 @@
 				59E04D99206FFD9E00AB5C2B /* ViewController.mm */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		59F5D101207992BF00E961CE /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D102207992D800E961CE /* NSString+CppStr.h */,
+				59F5D103207992D800E961CE /* NSString+CppStr.mm */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		59F5D10520799B7A00E961CE /* JDStatusBarNotification */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D10620799B7A00E961CE /* JDStatusBarNotification.m */,
+				59F5D10720799B7A00E961CE /* JDStatusBarStyle.h */,
+				59F5D10820799B7A00E961CE /* JDStatusBarView.m */,
+				59F5D10920799B7A00E961CE /* JDStatusBarNotification.h */,
+				59F5D10A20799B7A00E961CE /* JDStatusBarView.h */,
+				59F5D10B20799B7A00E961CE /* JDStatusBarStyle.m */,
+			);
+			path = JDStatusBarNotification;
+			sourceTree = "<group>";
+		};
+		59F5D10F20799B8800E961CE /* TWMessageBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D11020799B8800E961CE /* TWMessageBarManager.m */,
+				59F5D11120799B8800E961CE /* Icons */,
+				59F5D11820799B8800E961CE /* TWMessageBarManager.h */,
+			);
+			path = TWMessageBarManager;
+			sourceTree = "<group>";
+		};
+		59F5D11120799B8800E961CE /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D11220799B8800E961CE /* icon-info@2x.png */,
+				59F5D11320799B8800E961CE /* icon-error.png */,
+				59F5D11420799B8800E961CE /* icon-info.png */,
+				59F5D11520799B8800E961CE /* icon-success@2x.png */,
+				59F5D11620799B8800E961CE /* icon-error@2x.png */,
+				59F5D11720799B8800E961CE /* icon-success.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		8293D06B07D754DEBC785A84 /* Pods */ = {
@@ -348,9 +428,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				59E04DA2206FFD9E00AB5C2B /* LaunchScreen.storyboard in Resources */,
+				59F5D11C20799B8800E961CE /* icon-info.png in Resources */,
+				59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */,
 				59E04D9F206FFD9E00AB5C2B /* Assets.xcassets in Resources */,
+				59F5D11F20799B8800E961CE /* icon-success.png in Resources */,
 				59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */,
+				59F5D11B20799B8800E961CE /* icon-error.png in Resources */,
 				59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */,
+				59F5D11A20799B8800E961CE /* icon-info@2x.png in Resources */,
+				59F5D11D20799B8800E961CE /* icon-success@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,16 +503,22 @@
 				59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */,
 				59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */,
 				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
+				59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */,
+				59F5D10E20799B7A00E961CE /* JDStatusBarStyle.m in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
 				59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */,
 				59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */,
 				59F51AE120738CF2004AFBE3 /* restclient.cc in Sources */,
+				59F5D10C20799B7A00E961CE /* JDStatusBarNotification.m in Sources */,
 				59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */,
 				59F51B1620744C09004AFBE3 /* firebase_basic.cpp in Sources */,
+				59F5D104207992D800E961CE /* NSString+CppStr.mm in Sources */,
 				59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */,
 				59F51B1720744C09004AFBE3 /* firebase_connection.cpp in Sources */,
+				59F5D11920799B8800E961CE /* TWMessageBarManager.m in Sources */,
 				59F51B1520744C09004AFBE3 /* firebase_database.cpp in Sources */,
-				59F51B3420747455004AFBE3 /* CreateProjectController.m in Sources */,
+				59F5D10D20799B7A00E961CE /* JDStatusBarView.m in Sources */,
+				59F51B3420747455004AFBE3 /* CreateProjectController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +669,49 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"ChameleonFramework\"",
+					"-l\"GoogleToolboxForMac\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"leveldb-library\"",
+					"-l\"nanopb\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"firebase_database\"",
+					"-framework",
+					"\"firebase\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -603,6 +738,49 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"ChameleonFramework\"",
+					"-l\"GoogleToolboxForMac\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"leveldb-library\"",
+					"-l\"nanopb\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"firebase_database\"",
+					"-framework",
+					"\"firebase\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";

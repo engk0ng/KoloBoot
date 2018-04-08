@@ -10,7 +10,7 @@
 
 FirebaseConnection::FirebaseConnection() {
     app = firebase::App::Create();
-    database = firebase::database::Database::GetInstance(app->GetInstance());
+    database = firebase::database::Database::GetInstance(app);
     database->set_persistence_enabled(true);
     printf("Created the firebase app %x",
            static_cast<int>(reinterpret_cast<intptr_t>(app)));

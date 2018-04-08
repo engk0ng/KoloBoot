@@ -12,7 +12,6 @@
 #include <iostream>
 #include <locale>
 
-
 std::vector<std::wstring>
 Koloboot::Helper::read_file(const std::string& path) {
     std::vector<std::wstring> kosakata;
@@ -58,4 +57,44 @@ int Koloboot::Helper::create_timestampt() {
     gettimeofday(&val, NULL);
     int tm_val = (int)val.tv_sec;
     return tm_val;
+}
+
+const char * Koloboot::Helper::MYCFStringCopyUTF8String(CFStringRef aString) {
+    if (aString == NULL) {
+        return NULL;
+    }
+    
+    CFIndex length = CFStringGetLength(aString);
+    CFIndex maxSize =
+    CFStringGetMaximumSizeForEncoding(length, kCFStringEncodingUTF8) + 1;
+    char *buffer = (char *)malloc(maxSize);
+    if (CFStringGetCString(aString, buffer, maxSize,
+                           kCFStringEncodingUTF8)) {
+        return buffer;
+    }
+    free(buffer); // If we failed
+    return NULL;
+}
+
+CFStringRef Koloboot::Helper::UUID() {
+    CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+    CFStringRef uuid = CFUUIDCreateString(kCFAllocatorMalloc, uuidRef);
+    return uuid;
+}
+
+std::string Koloboot::Helper::getUserDefault(CFStringRef key) {
+    CFStringRef dta = (CFStringRef)CFPreferencesCopyAppValue(key, kCFPreferencesCurrentApplication);
+    if (dta) {
+        const char *conver = MYCFStringCopyUTF8String(dta);
+        if (conver) {
+            return std::string(conver);
+        }
+        return "";
+    }
+    return "";
+}
+
+void Koloboot::Helper::setUserDefault(CFStringRef key, CFStringRef val) {
+    CFPreferencesSetAppValue(key, val, kCFPreferencesCurrentApplication);
+    CFRelease(val);
 }

@@ -12,11 +12,13 @@
 #include <stdio.h>
 #include "firebase_basic.h"
 #include "helper_oncpp.h"
+#include <functional>
 
 class FirebaseDatabase: public FirebaseBasic {
     
 public:
     FirebaseDatabase(const void *cn);
+    std::function<bool(const std::map<std::string, std::string> &)> saveProject();
 private:
 };
 

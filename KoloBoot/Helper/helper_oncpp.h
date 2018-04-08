@@ -63,6 +63,7 @@
 #include <string>
 #include <fstream>
 #include "helper_onc.h"
+#include <CoreFoundation/CoreFoundation.h>
 
 namespace Koloboot {
     namespace Helper {
@@ -70,6 +71,10 @@ namespace Koloboot {
         bool delete_file(const std::string& path);
         bool fexists(const std::string& path);
         int create_timestampt();
+        const char *MYCFStringCopyUTF8String(CFStringRef aString);
+        CFStringRef UUID();
+        std::string getUserDefault(CFStringRef key);
+        void setUserDefault(CFStringRef key, CFStringRef val);
     }
 }
 

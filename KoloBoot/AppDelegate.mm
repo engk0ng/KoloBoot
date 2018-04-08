@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "firebase_connection.h"
+#import "helper_oncpp.h"
+#import <Chameleon.h>
 
 struct FirebaseAccess {
     FirebaseConnection con;
@@ -16,7 +18,7 @@ struct FirebaseAccess {
     }
 };
 
-@interface AppDelegate ()
+@interface AppDelegate () <TWMessageBarStyleSheet>
 
 @end
 
@@ -25,6 +27,10 @@ struct FirebaseAccess {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    std::string uuid = Koloboot::Helper::getUserDefault(CFSTR("UUID"));
+    if (uuid.empty()) {
+        Koloboot::Helper::setUserDefault(CFSTR("UUID"), Koloboot::Helper::UUID());
+    }
     _serverConnect = new FirebaseAccess;
     return YES;
 }
@@ -66,5 +72,95 @@ struct FirebaseAccess {
     }
 }
 
+- (void)messageNotification:(NSString *)title description:(NSString *)description visible:(BOOL)visible delay:(NSTimeInterval)delay type:(TWMessageBarMessageType)type errorCode:(NSInteger)errorcode
+{
+    static NSInteger errorCodePrev = 0;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if (visible) {
+            
+            if (errorcode == kCFURLErrorNotConnectedToInternet) {
+                
+                if (errorCodePrev != errorcode)
+                    [JDStatusBarNotification showWithStatus:NSLocalizedString(title, nil) dismissAfter:delay styleName:JDStatusBarStyleDefault];
+                
+                errorCodePrev = errorcode;
+                
+            } else {
+                
+                if (description.length > 0) {
+                    
+                    [TWMessageBarManager sharedInstance].styleSheet = self;
+                    [[TWMessageBarManager sharedInstance] showMessageWithTitle:[NSString stringWithFormat:@"%@\n", NSLocalizedString(title, nil)] description:NSLocalizedString(description, nil) type:type duration:delay];
+                }
+            }
+            
+        } else {
+            
+            [[TWMessageBarManager sharedInstance] hideAllAnimated:YES];
+        }
+    });
+}
+
+- (UIColor *)backgroundColorForMessageType:(TWMessageBarMessageType)type
+{
+    UIColor *backgroundColor = nil;
+    switch (type)
+    {
+        case TWMessageBarMessageTypeError:
+            backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.90];
+            break;
+        case TWMessageBarMessageTypeSuccess:
+            backgroundColor = [UIColor colorWithRed:0.588 green:0.797 blue:0.000 alpha:0.90];
+            break;
+        case TWMessageBarMessageTypeInfo:
+            backgroundColor = [UIColor flatSkyBlueColorDark];
+            break;
+        default:
+            break;
+    }
+    return backgroundColor;
+}
+
+- (UIColor *)strokeColorForMessageType:(TWMessageBarMessageType)type
+{
+    UIColor *strokeColor = nil;
+    switch (type)
+    {
+        case TWMessageBarMessageTypeError:
+            strokeColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+            break;
+        case TWMessageBarMessageTypeSuccess:
+            strokeColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:1.0];
+            break;
+        case TWMessageBarMessageTypeInfo:
+            strokeColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:1.0];
+            break;
+        default:
+            break;
+    }
+    return strokeColor;
+}
+
+- (UIImage *)iconImageForMessageType:(TWMessageBarMessageType)type
+{
+    UIImage *iconImage = nil;
+    switch (type)
+    {
+        case TWMessageBarMessageTypeError:
+            iconImage = [UIImage imageNamed:@"icon-error.png"];
+            break;
+        case TWMessageBarMessageTypeSuccess:
+            iconImage = [UIImage imageNamed:@"icon-success.png"];
+            break;
+        case TWMessageBarMessageTypeInfo:
+            iconImage = [UIImage imageNamed:@"icon-info.png"];
+            break;
+        default:
+            break;
+    }
+    return iconImage;
+}
 
 @end

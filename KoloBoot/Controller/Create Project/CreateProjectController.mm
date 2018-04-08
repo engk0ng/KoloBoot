@@ -7,9 +7,14 @@
 //
 
 #import "CreateProjectController.h"
+#import "AppDelegate.h"
+#import "NSString+CppStr.h"
+#import "ProgressView.h"
+#import "firebase_database.h"
 
 @interface CreateProjectController ()
-
+@property (nonatomic, assign) FirebaseDatabase *dbase;
+@property (nonatomic, assign) const void *con;
 @end
 
 @implementation CreateProjectController
@@ -18,7 +23,11 @@
     [super viewDidLoad];
     _nameField.delegate = self;
     _baseUrlField.delegate = self;
+    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction:)]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangingFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    _con = [[AppDelegate sharedAppdelegate] get_firebase_connector:DATABASE];
+    _dbase = new FirebaseDatabase(_con);
     // Do any additional setup after loading the view.
 }
 
@@ -46,7 +55,42 @@
 }
 
 - (void)dealloc {
+    delete _dbase;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+#pragma mark - Action
+
+- (void)saveAction:(id)sender {
+    if ([_delegate respondsToSelector:@selector(saveDataProject:)]) {
+        auto mp = std::map<std::string, std::string>();
+        mp["nama"] = [_nameField.text toStdString];
+        mp["base_url"] = [_baseUrlField.text toStdString];
+        NSString *msg = @"";
+        bool status = true;
+        if (mp.at("nama").empty()) {
+            msg = @"Nama project tidak boleh kosong";
+            status = false;
+        }
+        if (mp.at("base_url").empty()) {
+            msg = @"Base URL tidak boleh kosong";
+            status = false;
+        }
+        
+        if (status == false) {
+            [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:msg visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+            return;
+        }
+        else {
+            [[ProgressView Instance] showProgressIndicatorInView:self.view withText:@"Loading..."];
+            auto insert = _dbase->saveProject();
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (insert(mp)) {
+                    
+                }
+            });
+        }
+    }
 }
 /*
 #pragma mark - Navigation

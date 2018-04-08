@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "WYPopoverController.h"
 #import "CreateProjectController.h"
+#import "AppDelegate.h"
 
-@interface ViewController () <WYPopoverControllerDelegate>
+@interface ViewController () <WYPopoverControllerDelegate, CreateProjectControllerDelegate>
 @property (nonatomic, strong) WYPopoverController *createProjectController;
 @end
 
@@ -20,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //_dbase = std::make_shared<FirebaseDatabase>(new FirebaseDatabase());
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,11 +33,10 @@
 
 - (IBAction)addProjectAction:(id)sender {
     CreateProjectController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CreateProjectController"];
+    settingsViewController.delegate = self;
     settingsViewController.preferredContentSize = CGSizeMake(320, 280);
     
     settingsViewController.title = @"Create Project";
-    
-    [settingsViewController.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(change:)]];
     
     [settingsViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)]];
     
@@ -86,6 +87,12 @@
 {
     // keyboard is shown and the popover will be moved up by 163 pixels for example ( *value = 163 )
     *value = 0; // set value to 0 if you want to avoid the popover to be moved
+}
+
+#pragma mark - CreateProjectControllerDelegate
+
+- (void)saveDataProject:(std::map<std::string, std::string>)dta {
+    
 }
 
 @end
