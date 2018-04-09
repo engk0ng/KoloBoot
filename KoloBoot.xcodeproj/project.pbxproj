@@ -24,11 +24,6 @@
 		59F51AF220738E04004AFBE3 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AEE20738E04004AFBE3 /* libcurl.a */; };
 		59F51AF420738E5B004AFBE3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51AF320738E5A004AFBE3 /* libz.tbd */; };
 		59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B0020738F5B004AFBE3 /* helper_oncpp.cc */; };
-		59F51B0C20744953004AFBE3 /* firebase_database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51B0A20744950004AFBE3 /* firebase_database.framework */; };
-		59F51B0D20744953004AFBE3 /* firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F51B0B20744953004AFBE3 /* firebase.framework */; };
-		59F51B1520744C09004AFBE3 /* firebase_database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1020744C08004AFBE3 /* firebase_database.cpp */; };
-		59F51B1620744C09004AFBE3 /* firebase_basic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1220744C08004AFBE3 /* firebase_basic.cpp */; };
-		59F51B1720744C09004AFBE3 /* firebase_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1420744C09004AFBE3 /* firebase_connection.cpp */; };
 		59F51B1A20744FDF004AFBE3 /* helper_onc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B1920744FDF004AFBE3 /* helper_onc.c */; };
 		59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */; };
 		59F51B2E207470F6004AFBE3 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F51B2A207470F6004AFBE3 /* WYStoryboardPopoverSegue.m */; };
@@ -46,6 +41,16 @@
 		59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11620799B8800E961CE /* icon-error@2x.png */; };
 		59F5D11F20799B8800E961CE /* icon-success.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11720799B8800E961CE /* icon-success.png */; };
 		59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D1212079E1FE00E961CE /* ProgressView.m */; };
+		59F5D127207A046800E961CE /* PathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D126207A046800E961CE /* PathController.m */; };
+		59F5D12B207A386200E961CE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F5D12A207A386200E961CE /* MobileCoreServices.framework */; };
+		59F5D131207A5AB900E961CE /* koloboot.db in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D130207A5AA500E961CE /* koloboot.db */; };
+		59F5D13B207ABE1B00E961CE /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D139207ABE1B00E961CE /* Exception.cpp */; };
+		59F5D141207AD96500E961CE /* Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D13F207AD96500E961CE /* Statement.cpp */; };
+		59F5D144207B09C600E961CE /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D142207B09C600E961CE /* Column.cpp */; };
+		59F5D14A207B1EAC00E961CE /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D148207B1EAC00E961CE /* Database.cpp */; };
+		59F5D14C207B546500E961CE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F5D14B207B546400E961CE /* libsqlite3.0.tbd */; };
+		59F5D14F207B555C00E961CE /* Transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D14D207B555C00E961CE /* Transaction.cpp */; };
+		59F5D155207B85F500E961CE /* Backup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D153207B85F500E961CE /* Backup.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,14 +83,6 @@
 		59F51AF320738E5A004AFBE3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		59F51B0020738F5B004AFBE3 /* helper_oncpp.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helper_oncpp.cc; sourceTree = "<group>"; };
 		59F51B0120738F5B004AFBE3 /* helper_oncpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helper_oncpp.h; sourceTree = "<group>"; };
-		59F51B0A20744950004AFBE3 /* firebase_database.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_database.framework; sourceTree = "<group>"; };
-		59F51B0B20744953004AFBE3 /* firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase.framework; sourceTree = "<group>"; };
-		59F51B0F20744C08004AFBE3 /* firebase_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firebase_connection.h; sourceTree = "<group>"; };
-		59F51B1020744C08004AFBE3 /* firebase_database.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = firebase_database.cpp; sourceTree = "<group>"; };
-		59F51B1120744C08004AFBE3 /* firebase_database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firebase_database.h; sourceTree = "<group>"; };
-		59F51B1220744C08004AFBE3 /* firebase_basic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = firebase_basic.cpp; sourceTree = "<group>"; };
-		59F51B1320744C09004AFBE3 /* firebase_basic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firebase_basic.h; sourceTree = "<group>"; };
-		59F51B1420744C09004AFBE3 /* firebase_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = firebase_connection.cpp; sourceTree = "<group>"; };
 		59F51B1820744FDF004AFBE3 /* helper_onc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helper_onc.h; sourceTree = "<group>"; };
 		59F51B1920744FDF004AFBE3 /* helper_onc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = helper_onc.c; sourceTree = "<group>"; };
 		59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -113,6 +110,27 @@
 		59F5D11820799B8800E961CE /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageBarManager.h; sourceTree = "<group>"; };
 		59F5D1202079E1FE00E961CE /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		59F5D1212079E1FE00E961CE /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		59F5D125207A046800E961CE /* PathController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathController.h; sourceTree = "<group>"; };
+		59F5D126207A046800E961CE /* PathController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathController.m; sourceTree = "<group>"; };
+		59F5D12A207A386200E961CE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		59F5D130207A5AA500E961CE /* koloboot.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = koloboot.db; sourceTree = "<group>"; };
+		59F5D139207ABE1B00E961CE /* Exception.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
+		59F5D13A207ABE1B00E961CE /* Exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		59F5D13D207ACC3300E961CE /* Assertion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assertion.h; sourceTree = "<group>"; };
+		59F5D13F207AD96500E961CE /* Statement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Statement.cpp; sourceTree = "<group>"; };
+		59F5D140207AD96500E961CE /* Statement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Statement.h; sourceTree = "<group>"; };
+		59F5D142207B09C600E961CE /* Column.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Column.cpp; sourceTree = "<group>"; };
+		59F5D143207B09C600E961CE /* Column.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Column.h; sourceTree = "<group>"; };
+		59F5D146207B1CF100E961CE /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		59F5D148207B1EAC00E961CE /* Database.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Database.cpp; sourceTree = "<group>"; };
+		59F5D149207B1EAC00E961CE /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		59F5D14B207B546400E961CE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		59F5D14D207B555C00E961CE /* Transaction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Transaction.cpp; sourceTree = "<group>"; };
+		59F5D14E207B555C00E961CE /* Transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		59F5D151207B6DE000E961CE /* VariadicBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VariadicBind.h; sourceTree = "<group>"; };
+		59F5D153207B85F500E961CE /* Backup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Backup.cpp; sourceTree = "<group>"; };
+		59F5D154207B85F500E961CE /* Backup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backup.h; sourceTree = "<group>"; };
+		59F5D157207B87F300E961CE /* SQLiteCpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteCpp.h; sourceTree = "<group>"; };
 		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,12 +139,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F5D14C207B546500E961CE /* libsqlite3.0.tbd in Frameworks */,
+				59F5D12B207A386200E961CE /* MobileCoreServices.framework in Frameworks */,
 				59F51AF420738E5B004AFBE3 /* libz.tbd in Frameworks */,
 				59F51AEF20738E04004AFBE3 /* libcrypto.a in Frameworks */,
-				59F51B0C20744953004AFBE3 /* firebase_database.framework in Frameworks */,
 				59F51AF020738E04004AFBE3 /* libnghttp2.a in Frameworks */,
 				59F51AF120738E04004AFBE3 /* libssl.a in Frameworks */,
-				59F51B0D20744953004AFBE3 /* firebase.framework in Frameworks */,
 				59F51AF220738E04004AFBE3 /* libcurl.a in Frameworks */,
 				1519A3B5481A50DFA8367093 /* libPods-KoloBoot.a in Frameworks */,
 			);
@@ -158,7 +176,6 @@
 			children = (
 				59F51B3020747424004AFBE3 /* Controller */,
 				59F51B21207459AA004AFBE3 /* Custom */,
-				59F51B0E20744BE0004AFBE3 /* Firebase */,
 				59F51AFF20738F53004AFBE3 /* Helper */,
 				59F51AEA20738CFD004AFBE3 /* Library */,
 				59E04D95206FFD9E00AB5C2B /* AppDelegate.h */,
@@ -167,6 +184,7 @@
 				59E04D9E206FFD9E00AB5C2B /* Assets.xcassets */,
 				59E04DA0206FFD9E00AB5C2B /* LaunchScreen.storyboard */,
 				59E04DA3206FFD9E00AB5C2B /* Info.plist */,
+				59F5D130207A5AA500E961CE /* koloboot.db */,
 				59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */,
 				59E04DA4206FFD9E00AB5C2B /* main.m */,
 			);
@@ -176,8 +194,8 @@
 		59F51AD4207385E6004AFBE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59F51B0A20744950004AFBE3 /* firebase_database.framework */,
-				59F51B0B20744953004AFBE3 /* firebase.framework */,
+				59F5D14B207B546400E961CE /* libsqlite3.0.tbd */,
+				59F5D12A207A386200E961CE /* MobileCoreServices.framework */,
 				59F51AF320738E5A004AFBE3 /* libz.tbd */,
 				59F51AEB20738E03004AFBE3 /* libcrypto.a */,
 				59F51AEE20738E04004AFBE3 /* libcurl.a */,
@@ -243,19 +261,6 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		59F51B0E20744BE0004AFBE3 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				59F51B1220744C08004AFBE3 /* firebase_basic.cpp */,
-				59F51B1320744C09004AFBE3 /* firebase_basic.h */,
-				59F51B1420744C09004AFBE3 /* firebase_connection.cpp */,
-				59F51B0F20744C08004AFBE3 /* firebase_connection.h */,
-				59F51B1020744C08004AFBE3 /* firebase_database.cpp */,
-				59F51B1120744C08004AFBE3 /* firebase_database.h */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
 		59F51B21207459AA004AFBE3 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +293,7 @@
 		59F51B3020747424004AFBE3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D124207A044D00E961CE /* Path */,
 				59F51B3520747DD4004AFBE3 /* Home */,
 				59F51B312074742B004AFBE3 /* Create Project */,
 			);
@@ -315,6 +321,7 @@
 		59F5D101207992BF00E961CE /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D132207ABD0500E961CE /* SqliteLib */,
 				59F5D102207992D800E961CE /* NSString+CppStr.h */,
 				59F5D103207992D800E961CE /* NSString+CppStr.mm */,
 			);
@@ -355,6 +362,38 @@
 				59F5D11720799B8800E961CE /* icon-success.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		59F5D124207A044D00E961CE /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D125207A046800E961CE /* PathController.h */,
+				59F5D126207A046800E961CE /* PathController.m */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
+		59F5D132207ABD0500E961CE /* SqliteLib */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D139207ABE1B00E961CE /* Exception.cpp */,
+				59F5D13A207ABE1B00E961CE /* Exception.h */,
+				59F5D13D207ACC3300E961CE /* Assertion.h */,
+				59F5D13F207AD96500E961CE /* Statement.cpp */,
+				59F5D140207AD96500E961CE /* Statement.h */,
+				59F5D142207B09C600E961CE /* Column.cpp */,
+				59F5D143207B09C600E961CE /* Column.h */,
+				59F5D146207B1CF100E961CE /* Utils.h */,
+				59F5D148207B1EAC00E961CE /* Database.cpp */,
+				59F5D149207B1EAC00E961CE /* Database.h */,
+				59F5D14D207B555C00E961CE /* Transaction.cpp */,
+				59F5D14E207B555C00E961CE /* Transaction.h */,
+				59F5D151207B6DE000E961CE /* VariadicBind.h */,
+				59F5D153207B85F500E961CE /* Backup.cpp */,
+				59F5D154207B85F500E961CE /* Backup.h */,
+				59F5D157207B87F300E961CE /* SQLiteCpp.h */,
+			);
+			path = SqliteLib;
 			sourceTree = "<group>";
 		};
 		8293D06B07D754DEBC785A84 /* Pods */ = {
@@ -427,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F5D131207A5AB900E961CE /* koloboot.db in Resources */,
 				59E04DA2206FFD9E00AB5C2B /* LaunchScreen.storyboard in Resources */,
 				59F5D11C20799B8800E961CE /* icon-info.png in Resources */,
 				59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */,
@@ -499,10 +539,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F51B2E207470F6004AFBE3 /* WYStoryboardPopoverSegue.m in Sources */,
+				59F5D13B207ABE1B00E961CE /* Exception.cpp in Sources */,
 				59F51B1A20744FDF004AFBE3 /* helper_onc.c in Sources */,
+				59F5D141207AD96500E961CE /* Statement.cpp in Sources */,
 				59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */,
 				59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */,
+				59F5D14F207B555C00E961CE /* Transaction.cpp in Sources */,
 				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
+				59F5D144207B09C600E961CE /* Column.cpp in Sources */,
 				59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */,
 				59F5D10E20799B7A00E961CE /* JDStatusBarStyle.m in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
@@ -511,13 +555,13 @@
 				59F51AE120738CF2004AFBE3 /* restclient.cc in Sources */,
 				59F5D10C20799B7A00E961CE /* JDStatusBarNotification.m in Sources */,
 				59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */,
-				59F51B1620744C09004AFBE3 /* firebase_basic.cpp in Sources */,
 				59F5D104207992D800E961CE /* NSString+CppStr.mm in Sources */,
 				59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */,
-				59F51B1720744C09004AFBE3 /* firebase_connection.cpp in Sources */,
+				59F5D127207A046800E961CE /* PathController.m in Sources */,
 				59F5D11920799B8800E961CE /* TWMessageBarManager.m in Sources */,
-				59F51B1520744C09004AFBE3 /* firebase_database.cpp in Sources */,
 				59F5D10D20799B7A00E961CE /* JDStatusBarView.m in Sources */,
+				59F5D14A207B1EAC00E961CE /* Database.cpp in Sources */,
+				59F5D155207B85F500E961CE /* Backup.cpp in Sources */,
 				59F51B3420747455004AFBE3 /* CreateProjectController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,39 +708,26 @@
 					"$(PROJECT_DIR)/include",
 				);
 				INFOPLIST_FILE = KoloBoot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-l\"ChameleonFramework\"",
-					"-l\"GoogleToolboxForMac\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"c++\"",
 					"-l\"icucore\"",
-					"-l\"leveldb-library\"",
-					"-l\"nanopb\"",
 					"-l\"sqlite3\"",
 					"-l\"z\"",
 					"-framework",
 					"\"CFNetwork\"",
 					"-framework",
 					"\"CoreGraphics\"",
-					"-framework",
-					"\"FirebaseAnalytics\"",
-					"-framework",
-					"\"FirebaseCore\"",
-					"-framework",
-					"\"FirebaseCoreDiagnostics\"",
-					"-framework",
-					"\"FirebaseDatabase\"",
-					"-framework",
-					"\"FirebaseInstanceID\"",
-					"-framework",
-					"\"FirebaseNanoPB\"",
 					"-framework",
 					"\"QuartzCore\"",
 					"-framework",
@@ -707,10 +738,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-framework",
-					"\"firebase_database\"",
-					"-framework",
-					"\"firebase\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -734,39 +761,26 @@
 					"$(PROJECT_DIR)/include",
 				);
 				INFOPLIST_FILE = KoloBoot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-l\"ChameleonFramework\"",
-					"-l\"GoogleToolboxForMac\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"c++\"",
 					"-l\"icucore\"",
-					"-l\"leveldb-library\"",
-					"-l\"nanopb\"",
 					"-l\"sqlite3\"",
 					"-l\"z\"",
 					"-framework",
 					"\"CFNetwork\"",
 					"-framework",
 					"\"CoreGraphics\"",
-					"-framework",
-					"\"FirebaseAnalytics\"",
-					"-framework",
-					"\"FirebaseCore\"",
-					"-framework",
-					"\"FirebaseCoreDiagnostics\"",
-					"-framework",
-					"\"FirebaseDatabase\"",
-					"-framework",
-					"\"FirebaseInstanceID\"",
-					"-framework",
-					"\"FirebaseNanoPB\"",
 					"-framework",
 					"\"QuartzCore\"",
 					"-framework",
@@ -777,10 +791,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-framework",
-					"\"firebase_database\"",
-					"-framework",
-					"\"firebase\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oasemedia.kamus;
 				PRODUCT_NAME = "$(TARGET_NAME)";

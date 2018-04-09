@@ -7,16 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "firebase_connection.h"
 #import "helper_oncpp.h"
 #import <Chameleon.h>
-
-struct FirebaseAccess {
-    FirebaseConnection con;
-    const void *get_connection_ptr(FirebaseType type) {
-        return con.get_connection(type);
-    }
-};
 
 @interface AppDelegate () <TWMessageBarStyleSheet>
 
@@ -31,16 +23,11 @@ struct FirebaseAccess {
     if (uuid.empty()) {
         Koloboot::Helper::setUserDefault(CFSTR("UUID"), Koloboot::Helper::UUID());
     }
-    _serverConnect = new FirebaseAccess;
     return YES;
 }
 
 + (AppDelegate *)sharedAppdelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
-}
-
-- (const void *)get_firebase_connector:(FirebaseType)tp {
-    return _serverConnect->get_connection_ptr(tp);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -67,9 +54,6 @@ struct FirebaseAccess {
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    if (_serverConnect) {
-        delete _serverConnect;
-    }
 }
 
 - (void)messageNotification:(NSString *)title description:(NSString *)description visible:(BOOL)visible delay:(NSTimeInterval)delay type:(TWMessageBarMessageType)type errorCode:(NSInteger)errorcode

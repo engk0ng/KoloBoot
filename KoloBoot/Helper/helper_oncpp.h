@@ -75,6 +75,9 @@ namespace Koloboot {
         CFStringRef UUID();
         std::string getUserDefault(CFStringRef key);
         void setUserDefault(CFStringRef key, CFStringRef val);
+        std::string fileInfoLocation(const std::string& file);
+        const std::string fileBundleLocation(const std::string& file);
+        const std::vector<std::string> splitStr(const std::string& str, char delim);
     }
 }
 

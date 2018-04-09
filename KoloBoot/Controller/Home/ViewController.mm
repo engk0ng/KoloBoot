@@ -10,6 +10,11 @@
 #import "WYPopoverController.h"
 #import "CreateProjectController.h"
 #import "AppDelegate.h"
+#import <iostream>
+#import "helper_oncpp.h"
+#import "SQLiteCpp.h"
+
+#define DB_PATH [[NSBundle mainBundle] pathForResource:@"koloboot" ofType:@"db"]
 
 @interface ViewController () <WYPopoverControllerDelegate, CreateProjectControllerDelegate>
 @property (nonatomic, strong) WYPopoverController *createProjectController;
@@ -21,6 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    try {
+        SQLite::Database db(Koloboot::Helper::fileBundleLocation("koloboot.db"));
+    } catch (std::exception& ex) {
+        std::cout << ex.what() << std::endl;
+    }
     //_dbase = std::make_shared<FirebaseDatabase>(new FirebaseDatabase());
     // Do any additional setup after loading the view, typically from a nib.
 }

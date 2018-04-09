@@ -10,11 +10,9 @@
 #import "AppDelegate.h"
 #import "NSString+CppStr.h"
 #import "ProgressView.h"
-#import "firebase_database.h"
+#import "PathController.h"
 
 @interface CreateProjectController ()
-@property (nonatomic, assign) FirebaseDatabase *dbase;
-@property (nonatomic, assign) const void *con;
 @end
 
 @implementation CreateProjectController
@@ -26,8 +24,6 @@
     [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction:)]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangingFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
-    _con = [[AppDelegate sharedAppdelegate] get_firebase_connector:DATABASE];
-    _dbase = new FirebaseDatabase(_con);
     // Do any additional setup after loading the view.
 }
 
@@ -55,7 +51,6 @@
 }
 
 - (void)dealloc {
-    delete _dbase;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
@@ -82,13 +77,7 @@
             return;
         }
         else {
-            [[ProgressView Instance] showProgressIndicatorInView:self.view withText:@"Loading..."];
-            auto insert = _dbase->saveProject();
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (insert(mp)) {
-                    
-                }
-            });
+            
         }
     }
 }
