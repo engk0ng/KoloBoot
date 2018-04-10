@@ -41,9 +41,8 @@
 		59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11620799B8800E961CE /* icon-error@2x.png */; };
 		59F5D11F20799B8800E961CE /* icon-success.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D11720799B8800E961CE /* icon-success.png */; };
 		59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D1212079E1FE00E961CE /* ProgressView.m */; };
-		59F5D127207A046800E961CE /* PathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D126207A046800E961CE /* PathController.m */; };
+		59F5D127207A046800E961CE /* PathController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D126207A046800E961CE /* PathController.mm */; };
 		59F5D12B207A386200E961CE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F5D12A207A386200E961CE /* MobileCoreServices.framework */; };
-		59F5D131207A5AB900E961CE /* koloboot.db in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D130207A5AA500E961CE /* koloboot.db */; };
 		59F5D13B207ABE1B00E961CE /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D139207ABE1B00E961CE /* Exception.cpp */; };
 		59F5D141207AD96500E961CE /* Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D13F207AD96500E961CE /* Statement.cpp */; };
 		59F5D144207B09C600E961CE /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D142207B09C600E961CE /* Column.cpp */; };
@@ -54,6 +53,8 @@
 		59F5D15B207BC51300E961CE /* DBManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D159207BC51300E961CE /* DBManager.cpp */; };
 		59F5D15F207C37E300E961CE /* BaseModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D15D207C37E300E961CE /* BaseModel.cpp */; };
 		59F5D162207C3A7400E961CE /* Project.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D160207C3A7400E961CE /* Project.cpp */; };
+		59F5D168207C56A100E961CE /* rest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D167207C56A100E961CE /* rest.sqlite */; };
+		59F5D16E207C6D0500E961CE /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D16C207C6D0500E961CE /* Path.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,9 +115,8 @@
 		59F5D1202079E1FE00E961CE /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		59F5D1212079E1FE00E961CE /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		59F5D125207A046800E961CE /* PathController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathController.h; sourceTree = "<group>"; };
-		59F5D126207A046800E961CE /* PathController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathController.m; sourceTree = "<group>"; };
+		59F5D126207A046800E961CE /* PathController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PathController.mm; sourceTree = "<group>"; };
 		59F5D12A207A386200E961CE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		59F5D130207A5AA500E961CE /* koloboot.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = koloboot.db; sourceTree = "<group>"; };
 		59F5D139207ABE1B00E961CE /* Exception.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
 		59F5D13A207ABE1B00E961CE /* Exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		59F5D13D207ACC3300E961CE /* Assertion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assertion.h; sourceTree = "<group>"; };
@@ -140,6 +140,9 @@
 		59F5D15E207C37E300E961CE /* BaseModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseModel.hpp; sourceTree = "<group>"; };
 		59F5D160207C3A7400E961CE /* Project.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Project.cpp; sourceTree = "<group>"; };
 		59F5D161207C3A7400E961CE /* Project.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Project.hpp; sourceTree = "<group>"; };
+		59F5D167207C56A100E961CE /* rest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = rest.sqlite; sourceTree = "<group>"; };
+		59F5D16C207C6D0500E961CE /* Path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
+		59F5D16D207C6D0500E961CE /* Path.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Path.hpp; sourceTree = "<group>"; };
 		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,7 +197,7 @@
 				59E04D9E206FFD9E00AB5C2B /* Assets.xcassets */,
 				59E04DA0206FFD9E00AB5C2B /* LaunchScreen.storyboard */,
 				59E04DA3206FFD9E00AB5C2B /* Info.plist */,
-				59F5D130207A5AA500E961CE /* koloboot.db */,
+				59F5D167207C56A100E961CE /* rest.sqlite */,
 				59F51B1B2074565D004AFBE3 /* GoogleService-Info.plist */,
 				59E04DA4206FFD9E00AB5C2B /* main.m */,
 			);
@@ -380,7 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				59F5D125207A046800E961CE /* PathController.h */,
-				59F5D126207A046800E961CE /* PathController.m */,
+				59F5D126207A046800E961CE /* PathController.mm */,
 			);
 			path = Path;
 			sourceTree = "<group>";
@@ -415,6 +418,8 @@
 				59F5D15E207C37E300E961CE /* BaseModel.hpp */,
 				59F5D160207C3A7400E961CE /* Project.cpp */,
 				59F5D161207C3A7400E961CE /* Project.hpp */,
+				59F5D16C207C6D0500E961CE /* Path.cpp */,
+				59F5D16D207C6D0500E961CE /* Path.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,7 +494,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59F5D131207A5AB900E961CE /* koloboot.db in Resources */,
 				59E04DA2206FFD9E00AB5C2B /* LaunchScreen.storyboard in Resources */,
 				59F5D11C20799B8800E961CE /* icon-info.png in Resources */,
 				59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */,
@@ -498,6 +502,7 @@
 				59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */,
 				59F5D11B20799B8800E961CE /* icon-error.png in Resources */,
 				59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */,
+				59F5D168207C56A100E961CE /* rest.sqlite in Resources */,
 				59F5D11A20799B8800E961CE /* icon-info@2x.png in Resources */,
 				59F5D11D20799B8800E961CE /* icon-success@2x.png in Resources */,
 			);
@@ -582,9 +587,10 @@
 				59F5D104207992D800E961CE /* NSString+CppStr.mm in Sources */,
 				59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */,
 				59F5D15B207BC51300E961CE /* DBManager.cpp in Sources */,
-				59F5D127207A046800E961CE /* PathController.m in Sources */,
+				59F5D127207A046800E961CE /* PathController.mm in Sources */,
 				59F5D11920799B8800E961CE /* TWMessageBarManager.m in Sources */,
 				59F5D10D20799B7A00E961CE /* JDStatusBarView.m in Sources */,
+				59F5D16E207C6D0500E961CE /* Path.cpp in Sources */,
 				59F5D14A207B1EAC00E961CE /* Database.cpp in Sources */,
 				59F5D155207B85F500E961CE /* Backup.cpp in Sources */,
 				59F51B3420747455004AFBE3 /* CreateProjectController.mm in Sources */,

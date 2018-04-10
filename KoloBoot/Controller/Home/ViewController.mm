@@ -41,7 +41,6 @@
     CreateProjectController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CreateProjectController"];
     settingsViewController.delegate = self;
     settingsViewController.dbase = manager;
-    manager.reset();
     settingsViewController.preferredContentSize = CGSizeMake(320, 280);
     
     settingsViewController.title = @"Create Project";

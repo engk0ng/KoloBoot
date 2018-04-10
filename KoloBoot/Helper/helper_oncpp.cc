@@ -97,7 +97,7 @@ std::string Koloboot::Helper::getUserDefault(CFStringRef key) {
 
 void Koloboot::Helper::setUserDefault(CFStringRef key, CFStringRef val) {
     CFPreferencesSetAppValue(key, val, kCFPreferencesCurrentApplication);
-    CFRelease(val);
+    //CFRelease(val);
 }
 
 std::string Koloboot::Helper::fileInfoLocation(const std::string &file) {

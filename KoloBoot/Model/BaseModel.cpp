@@ -7,13 +7,13 @@
 //
 
 #include "BaseModel.hpp"
-
 namespace Model {
     BaseModel::BaseModel() {}
     
     BaseModel::BaseModel(int id, const std::string& nm):
         _id(id), name(nm)
     {
+        
     }
     
     BaseModel::BaseModel(const std::string& nm):

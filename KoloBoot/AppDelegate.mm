@@ -23,6 +23,9 @@
     if (uuid.empty()) {
         Koloboot::Helper::setUserDefault(CFSTR("UUID"), Koloboot::Helper::UUID());
     }
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    Koloboot::Helper::setUserDefault(CFSTR("DIR"), (__bridge CFStringRef)[paths objectAtIndex:0]);
+    [self copyDatabaseIntoDocumentDicrectory];
     return YES;
 }
 
@@ -145,6 +148,22 @@
             break;
     }
     return iconImage;
+}
+
+- (void)copyDatabaseIntoDocumentDicrectory {
+    std::string dr = Koloboot::Helper::getUserDefault(CFSTR("DIR"));
+    NSString *destination = [[NSString stringWithUTF8String:dr.c_str()] stringByAppendingPathComponent:@"rest.sqlite"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:destination]) {
+        NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"rest.sqlite"];
+        NSError *error;
+        [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destination error:&error];
+        
+        // Check if any error occurred during copying and display it.
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+    }
+    Koloboot::Helper::setUserDefault(CFSTR("DIR"), (__bridge CFStringRef)destination);
 }
 
 @end

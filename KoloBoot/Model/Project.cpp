@@ -45,4 +45,12 @@ namespace Model {
         os << "[ ID : " << getId() << " Name: " << getName() << " BaseURL: " << getBaseUrl() << " ]" << std::endl;
         return os;
     }
+    
+    void Project::setPaths(const std::vector<Model::Path>& _paths) {
+        paths = _paths;
+    }
+    
+    std::vector<Model::Path> Project::getPaths() const noexcept {
+        return paths;
+    }
 }

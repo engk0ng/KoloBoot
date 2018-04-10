@@ -11,7 +11,9 @@
 
 #include <stdio.h>
 #include "BaseModel.hpp"
+#include "Path.hpp"
 #include <iostream>
+#include <vector>
 
 namespace Model {
     class Project : public Model::BaseModel {
@@ -21,12 +23,14 @@ namespace Model {
         Project();
         ~Project();
         void setBaseUrl(const std::string&);
+        void setPaths(const std::vector<Model::Path>&);
         const std::string getBaseUrl() const noexcept;
-        
+        std::vector<Model::Path> getPaths() const noexcept;
         std::ostream& operator<<(std::ostream& os);
         
     private:
         std::string base_url;
+        std::vector<Model::Path> paths;
     };
 }
 

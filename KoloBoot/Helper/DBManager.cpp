@@ -11,7 +11,9 @@
 #include <iostream>
 
 DBManager::DBManager() {
-    dbase = new SQLite::Database(Koloboot::Helper::fileBundleLocation("koloboot.db"));
+    std::string pth = Koloboot::Helper::getUserDefault(CFSTR("DIR"));
+    //std::cout << "Db: " << pth << std::endl;
+    dbase = new SQLite::Database(pth, SQLite::OPEN_READWRITE);
 }
 
 DBManager::~DBManager() {
@@ -41,7 +43,7 @@ std::function<int(const Model::Project&)> DBManager::saveProject() {
     return [&](const Model::Project& proj) -> int
     {
         try {
-            SQLite::Statement query(*dbase, "insert into project(name, base_url) values(?, ?)");
+            SQLite::Statement query(*dbase, "insert into projects(name, base_url) values(?, ?)");
             query.bind(1, proj.getName());
             query.bind(2, proj.getBaseUrl());
             return query.exec();

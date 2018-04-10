@@ -75,7 +75,16 @@
         return;
     }
     else {
-        
+        auto saves = dbase->saveProject();
+        if (saves(proj) != 0) {
+            PathController *pathVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PathController"];
+            pathVC.preferredContentSize = CGSizeMake(320, 280);
+            pathVC.title = @"Insert Request";
+            [self.navigationController pushViewController:pathVC animated:YES];
+        }
+        else {
+            [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:@"Data gagal disimpan" visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+        }
     }
 }
 /*
