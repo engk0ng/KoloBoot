@@ -167,18 +167,41 @@
                                                     <constraint firstAttribute="height" constant="35" id="xBi-Je-hyb"/>
                                                 </constraints>
                                                 <state key="normal" title="GET"/>
+                                                <connections>
+                                                    <action selector="chooseRequestAction:" destination="3gH-ry-HiC" eventType="touchUpInside" id="mRA-cd-E7r"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzd-0c-b6g">
+                                                <rect key="frame" x="99" y="170" width="176" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="GzX-LQ-XA9"/>
+                                                    <constraint firstAttribute="width" constant="176" id="YVQ-Xy-0VZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Simpan"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQw-44-nc6">
+                                                <rect key="frame" x="99" y="223" width="176" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="WCE-Hr-1yx"/>
+                                                </constraints>
+                                                <state key="normal" title="Batal"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="uQw-44-nc6" firstAttribute="trailing" secondItem="Nzd-0c-b6g" secondAttribute="trailing" id="2Bu-jA-UQp"/>
                                             <constraint firstItem="4At-rw-nfU" firstAttribute="leading" secondItem="3uK-go-BzQ" secondAttribute="leading" constant="8" id="7ba-Rl-vGg"/>
                                             <constraint firstAttribute="trailing" secondItem="4At-rw-nfU" secondAttribute="trailing" constant="8" id="Alq-2V-2PX"/>
+                                            <constraint firstItem="Nzd-0c-b6g" firstAttribute="top" secondItem="dcj-0I-vC7" secondAttribute="bottom" constant="46" id="Bxt-kd-Ba0"/>
                                             <constraint firstAttribute="trailing" secondItem="dcj-0I-vC7" secondAttribute="trailing" constant="8" id="Ltw-nv-du8"/>
+                                            <constraint firstItem="uQw-44-nc6" firstAttribute="top" secondItem="Nzd-0c-b6g" secondAttribute="bottom" constant="18" id="ZhJ-ri-P62"/>
                                             <constraint firstItem="3iY-49-Swy" firstAttribute="top" secondItem="4At-rw-nfU" secondAttribute="bottom" constant="24" id="a2w-d7-5aC"/>
                                             <constraint firstItem="4At-rw-nfU" firstAttribute="top" secondItem="3uK-go-BzQ" secondAttribute="top" constant="30" id="bE7-BF-n6C"/>
                                             <constraint firstItem="3iY-49-Swy" firstAttribute="leading" secondItem="3uK-go-BzQ" secondAttribute="leading" constant="8" id="brt-50-MR7"/>
+                                            <constraint firstItem="uQw-44-nc6" firstAttribute="leading" secondItem="Nzd-0c-b6g" secondAttribute="leading" id="cYO-Gm-KdT"/>
                                             <constraint firstItem="dcj-0I-vC7" firstAttribute="top" secondItem="4At-rw-nfU" secondAttribute="bottom" constant="24" id="nW4-ep-Iht"/>
                                             <constraint firstItem="dcj-0I-vC7" firstAttribute="leading" secondItem="3iY-49-Swy" secondAttribute="trailing" constant="8" id="oXZ-cm-Je3"/>
+                                            <constraint firstItem="Nzd-0c-b6g" firstAttribute="centerX" secondItem="3uK-go-BzQ" secondAttribute="centerX" id="wLj-Tv-WaI"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -204,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QN8-lI-ngS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841.25" y="132.04225352112675"/>
+            <point key="canvasLocation" x="1840.8" y="131.78410794602701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gpN-uP-GYb">

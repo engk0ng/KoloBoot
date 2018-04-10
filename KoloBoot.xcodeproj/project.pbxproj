@@ -55,6 +55,11 @@
 		59F5D162207C3A7400E961CE /* Project.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D160207C3A7400E961CE /* Project.cpp */; };
 		59F5D168207C56A100E961CE /* rest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D167207C56A100E961CE /* rest.sqlite */; };
 		59F5D16E207C6D0500E961CE /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D16C207C6D0500E961CE /* Path.cpp */; };
+		59F5D17B207CAEDE00E961CE /* RequestPopupController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D179207CAEDE00E961CE /* RequestPopupController.mm */; };
+		59F5D17C207CAEDE00E961CE /* RequestPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D17A207CAEDE00E961CE /* RequestPopupController.xib */; };
+		59F5D180207CCCF800E961CE /* TypeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D17E207CCCF800E961CE /* TypeRequestCell.m */; };
+		59F5D181207CCCF800E961CE /* TypeRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D17F207CCCF800E961CE /* TypeRequestCell.xib */; };
+		59F5D184207CE38500E961CE /* GeneralModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D182207CE38500E961CE /* GeneralModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +148,14 @@
 		59F5D167207C56A100E961CE /* rest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = rest.sqlite; sourceTree = "<group>"; };
 		59F5D16C207C6D0500E961CE /* Path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
 		59F5D16D207C6D0500E961CE /* Path.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Path.hpp; sourceTree = "<group>"; };
+		59F5D178207CAEDE00E961CE /* RequestPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestPopupController.h; sourceTree = "<group>"; };
+		59F5D179207CAEDE00E961CE /* RequestPopupController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RequestPopupController.mm; sourceTree = "<group>"; };
+		59F5D17A207CAEDE00E961CE /* RequestPopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestPopupController.xib; sourceTree = "<group>"; };
+		59F5D17D207CCCF800E961CE /* TypeRequestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeRequestCell.h; sourceTree = "<group>"; };
+		59F5D17E207CCCF800E961CE /* TypeRequestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeRequestCell.m; sourceTree = "<group>"; };
+		59F5D17F207CCCF800E961CE /* TypeRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeRequestCell.xib; sourceTree = "<group>"; };
+		59F5D182207CE38500E961CE /* GeneralModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GeneralModel.cpp; sourceTree = "<group>"; };
+		59F5D183207CE38500E961CE /* GeneralModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GeneralModel.hpp; sourceTree = "<group>"; };
 		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -309,6 +322,7 @@
 		59F51B3020747424004AFBE3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D16F207C936900E961CE /* Popup Data */,
 				59F5D124207A044D00E961CE /* Path */,
 				59F51B3520747DD4004AFBE3 /* Home */,
 				59F51B312074742B004AFBE3 /* Create Project */,
@@ -420,8 +434,23 @@
 				59F5D161207C3A7400E961CE /* Project.hpp */,
 				59F5D16C207C6D0500E961CE /* Path.cpp */,
 				59F5D16D207C6D0500E961CE /* Path.hpp */,
+				59F5D182207CE38500E961CE /* GeneralModel.cpp */,
+				59F5D183207CE38500E961CE /* GeneralModel.hpp */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		59F5D16F207C936900E961CE /* Popup Data */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D178207CAEDE00E961CE /* RequestPopupController.h */,
+				59F5D179207CAEDE00E961CE /* RequestPopupController.mm */,
+				59F5D17A207CAEDE00E961CE /* RequestPopupController.xib */,
+				59F5D17D207CCCF800E961CE /* TypeRequestCell.h */,
+				59F5D17E207CCCF800E961CE /* TypeRequestCell.m */,
+				59F5D17F207CCCF800E961CE /* TypeRequestCell.xib */,
+			);
+			path = "Popup Data";
 			sourceTree = "<group>";
 		};
 		8293D06B07D754DEBC785A84 /* Pods */ = {
@@ -495,9 +524,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				59E04DA2206FFD9E00AB5C2B /* LaunchScreen.storyboard in Resources */,
+				59F5D181207CCCF800E961CE /* TypeRequestCell.xib in Resources */,
 				59F5D11C20799B8800E961CE /* icon-info.png in Resources */,
 				59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */,
 				59E04D9F206FFD9E00AB5C2B /* Assets.xcassets in Resources */,
+				59F5D17C207CAEDE00E961CE /* RequestPopupController.xib in Resources */,
 				59F5D11F20799B8800E961CE /* icon-success.png in Resources */,
 				59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */,
 				59F5D11B20799B8800E961CE /* icon-error.png in Resources */,
@@ -572,6 +603,7 @@
 				59F5D141207AD96500E961CE /* Statement.cpp in Sources */,
 				59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */,
 				59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */,
+				59F5D180207CCCF800E961CE /* TypeRequestCell.m in Sources */,
 				59F5D14F207B555C00E961CE /* Transaction.cpp in Sources */,
 				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
 				59F5D144207B09C600E961CE /* Column.cpp in Sources */,
@@ -580,6 +612,8 @@
 				59F5D162207C3A7400E961CE /* Project.cpp in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
 				59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */,
+				59F5D17B207CAEDE00E961CE /* RequestPopupController.mm in Sources */,
+				59F5D184207CE38500E961CE /* GeneralModel.cpp in Sources */,
 				59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */,
 				59F51AE120738CF2004AFBE3 /* restclient.cc in Sources */,
 				59F5D10C20799B7A00E961CE /* JDStatusBarNotification.m in Sources */,

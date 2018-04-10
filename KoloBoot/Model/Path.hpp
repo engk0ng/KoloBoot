@@ -11,12 +11,13 @@
 
 #include <stdio.h>
 #include "BaseModel.hpp"
+#include "GeneralModel.hpp"
 
 namespace Model {
-    class Path : public Model::BaseModel {
+    class Path : public Model::BaseModel, public Model::GeneralModel {
     public:
-        Path(int, int, const std::string&, const std::string&);
-        Path(int, const std::string&, const std::string&);
+        Path(int, int, const std::string&, const std::string&, std::string&&);
+        Path(int, const std::string&, const std::string&, std::string&&);
         Path();
         ~Path();
         void setProjectId(int);

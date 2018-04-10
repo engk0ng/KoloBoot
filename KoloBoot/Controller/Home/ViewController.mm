@@ -13,6 +13,7 @@
 #import <iostream>
 #import "helper_oncpp.h"
 #import "DBManager.hpp"
+#import <type_traits>
 
 @interface ViewController () <WYPopoverControllerDelegate, CreateProjectControllerDelegate>
 @property (nonatomic, strong) WYPopoverController *createProjectController;
@@ -27,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     manager = std::make_shared<DBManager>();
+    std::cout << std::is_same<std::string, std::string>::value << '\n';
     //_dbase = std::make_shared<FirebaseDatabase>(new FirebaseDatabase());
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -100,6 +102,10 @@
 
 - (void)saveDataProject:(std::map<std::string, std::string>)dta {
     
+}
+
+- (void)dealloc {
+    manager.reset();
 }
 
 @end

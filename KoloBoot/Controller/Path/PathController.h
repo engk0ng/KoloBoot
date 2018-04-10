@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <memory>
+
+class DBManager;
 
 @interface PathController : UIViewController
-
+@property (assign) std::shared_ptr<DBManager> dbase;
 @end

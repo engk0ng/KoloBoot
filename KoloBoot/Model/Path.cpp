@@ -9,16 +9,18 @@
 #include "Path.hpp"
 
 namespace Model {
-    Path::Path(int id_pth, int proj_id, const std::string& nm, const std::string& pth):
+    Path::Path(int id_pth, int proj_id, const std::string& nm, const std::string& pth, std::string&& t):
         Model::BaseModel(id_pth, nm),
+        Model::GeneralModel(t),
         project_id(proj_id),
         path(pth)
     {
         
     }
     
-    Path::Path(int proj_id, const std::string& nm, const std::string& pth):
+    Path::Path(int proj_id, const std::string& nm, const std::string& pth, std::string&& t):
         Model::BaseModel(nm),
+        Model::GeneralModel(t),
         project_id(proj_id),
         path(pth)
     {

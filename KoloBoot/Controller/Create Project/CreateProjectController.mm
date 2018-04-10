@@ -51,10 +51,6 @@
     _scrollView.contentInset = inset;
 }
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
-}
-
 #pragma mark - Action
 
 - (void)saveAction:(id)sender {
@@ -86,6 +82,11 @@
             [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:@"Data gagal disimpan" visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
         }
     }
+}
+
+- (void)dealloc {
+    dbase.reset();
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 /*
 #pragma mark - Navigation

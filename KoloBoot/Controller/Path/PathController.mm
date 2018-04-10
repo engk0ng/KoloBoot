@@ -7,6 +7,9 @@
 //
 
 #import "PathController.h"
+#import "RequestPopupController.h"
+#import "DBManager.hpp"
+#import "Path.hpp"
 
 @interface PathController ()
 
@@ -24,6 +27,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)chooseRequestAction:(id)sender {
+    RequestPopupController *reqPop = [[RequestPopupController alloc] initWithNibName:@"RequestPopupController" bundle:nil];
+    [reqPop show];
+    Model::Path pth;
+    pth.setType("makan");
+    
+    std::cout << pth.getType<std::string>() << std::endl;
+}
 /*
 #pragma mark - Navigation
 
