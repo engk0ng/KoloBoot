@@ -11,19 +11,20 @@
 #import "NSString+CppStr.h"
 #import "ProgressView.h"
 #import "PathController.h"
+#import "DBManager.hpp"
+#import "Project.hpp"
 
 @interface CreateProjectController ()
 @end
 
 @implementation CreateProjectController
-
+@synthesize dbase;
 - (void)viewDidLoad {
     [super viewDidLoad];
     _nameField.delegate = self;
     _baseUrlField.delegate = self;
     [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction:)]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangingFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
-    
     // Do any additional setup after loading the view.
 }
 
@@ -57,28 +58,24 @@
 #pragma mark - Action
 
 - (void)saveAction:(id)sender {
-    if ([_delegate respondsToSelector:@selector(saveDataProject:)]) {
-        auto mp = std::map<std::string, std::string>();
-        mp["nama"] = [_nameField.text toStdString];
-        mp["base_url"] = [_baseUrlField.text toStdString];
-        NSString *msg = @"";
-        bool status = true;
-        if (mp.at("nama").empty()) {
-            msg = @"Nama project tidak boleh kosong";
-            status = false;
-        }
-        if (mp.at("base_url").empty()) {
-            msg = @"Base URL tidak boleh kosong";
-            status = false;
-        }
+    Model::Project proj([_nameField.text toStdString], [_baseUrlField.text toStdString]);
+    NSString *msg = @"";
+    bool status = true;
+    if (proj.getName().empty()) {
+        msg = @"Nama project tidak boleh kosong";
+        status = false;
+    }
+    if (proj.getBaseUrl().empty()) {
+        msg = @"Base URL tidak boleh kosong";
+        status = false;
+    }
+    
+    if (status == false) {
+        [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:msg visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+        return;
+    }
+    else {
         
-        if (status == false) {
-            [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:msg visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
-            return;
-        }
-        else {
-            
-        }
     }
 }
 /*

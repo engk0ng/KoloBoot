@@ -58,6 +58,9 @@
 #define Size(w, h)                          CGSizeMake(w, h)
 #define Point(x, y)                         CGPointMake(x, y)
 
+
+#define PROJECT "projects"
+
 #include <stdio.h>
 #include <vector>
 #include <string>

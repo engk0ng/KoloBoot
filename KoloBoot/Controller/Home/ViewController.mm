@@ -12,25 +12,21 @@
 #import "AppDelegate.h"
 #import <iostream>
 #import "helper_oncpp.h"
-#import "SQLiteCpp.h"
-
-#define DB_PATH [[NSBundle mainBundle] pathForResource:@"koloboot" ofType:@"db"]
+#import "DBManager.hpp"
 
 @interface ViewController () <WYPopoverControllerDelegate, CreateProjectControllerDelegate>
 @property (nonatomic, strong) WYPopoverController *createProjectController;
+@property (nonatomic, assign) std::shared_ptr<DBManager> manager;
 @end
 
 @implementation ViewController
 
 @synthesize createProjectController;
+@synthesize manager;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    try {
-        SQLite::Database db(Koloboot::Helper::fileBundleLocation("koloboot.db"));
-    } catch (std::exception& ex) {
-        std::cout << ex.what() << std::endl;
-    }
+    manager = std::make_shared<DBManager>();
     //_dbase = std::make_shared<FirebaseDatabase>(new FirebaseDatabase());
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -44,6 +40,8 @@
 - (IBAction)addProjectAction:(id)sender {
     CreateProjectController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CreateProjectController"];
     settingsViewController.delegate = self;
+    settingsViewController.dbase = manager;
+    manager.reset();
     settingsViewController.preferredContentSize = CGSizeMake(320, 280);
     
     settingsViewController.title = @"Create Project";

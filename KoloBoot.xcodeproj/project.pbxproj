@@ -51,6 +51,9 @@
 		59F5D14C207B546500E961CE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F5D14B207B546400E961CE /* libsqlite3.0.tbd */; };
 		59F5D14F207B555C00E961CE /* Transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D14D207B555C00E961CE /* Transaction.cpp */; };
 		59F5D155207B85F500E961CE /* Backup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D153207B85F500E961CE /* Backup.cpp */; };
+		59F5D15B207BC51300E961CE /* DBManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D159207BC51300E961CE /* DBManager.cpp */; };
+		59F5D15F207C37E300E961CE /* BaseModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D15D207C37E300E961CE /* BaseModel.cpp */; };
+		59F5D162207C3A7400E961CE /* Project.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D160207C3A7400E961CE /* Project.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +134,12 @@
 		59F5D153207B85F500E961CE /* Backup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Backup.cpp; sourceTree = "<group>"; };
 		59F5D154207B85F500E961CE /* Backup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backup.h; sourceTree = "<group>"; };
 		59F5D157207B87F300E961CE /* SQLiteCpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteCpp.h; sourceTree = "<group>"; };
+		59F5D159207BC51300E961CE /* DBManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBManager.cpp; sourceTree = "<group>"; };
+		59F5D15A207BC51300E961CE /* DBManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DBManager.hpp; sourceTree = "<group>"; };
+		59F5D15D207C37E300E961CE /* BaseModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseModel.cpp; sourceTree = "<group>"; };
+		59F5D15E207C37E300E961CE /* BaseModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseModel.hpp; sourceTree = "<group>"; };
+		59F5D160207C3A7400E961CE /* Project.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Project.cpp; sourceTree = "<group>"; };
+		59F5D161207C3A7400E961CE /* Project.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Project.hpp; sourceTree = "<group>"; };
 		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +183,7 @@
 		59E04D94206FFD9E00AB5C2B /* KoloBoot */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D15C207C37A200E961CE /* Model */,
 				59F51B3020747424004AFBE3 /* Controller */,
 				59F51B21207459AA004AFBE3 /* Custom */,
 				59F51AFF20738F53004AFBE3 /* Helper */,
@@ -241,6 +251,7 @@
 		59F51AEA20738CFD004AFBE3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				59F5D132207ABD0500E961CE /* SqliteLib */,
 				59F5D10F20799B8800E961CE /* TWMessageBarManager */,
 				59F5D10520799B7A00E961CE /* JDStatusBarNotification */,
 				59F51B29207470F6004AFBE3 /* WYPopoverController */,
@@ -257,6 +268,8 @@
 				59F51B0120738F5B004AFBE3 /* helper_oncpp.h */,
 				59F51B1820744FDF004AFBE3 /* helper_onc.h */,
 				59F51B1920744FDF004AFBE3 /* helper_onc.c */,
+				59F5D159207BC51300E961CE /* DBManager.cpp */,
+				59F5D15A207BC51300E961CE /* DBManager.hpp */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -321,7 +334,6 @@
 		59F5D101207992BF00E961CE /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				59F5D132207ABD0500E961CE /* SqliteLib */,
 				59F5D102207992D800E961CE /* NSString+CppStr.h */,
 				59F5D103207992D800E961CE /* NSString+CppStr.mm */,
 			);
@@ -394,6 +406,17 @@
 				59F5D157207B87F300E961CE /* SQLiteCpp.h */,
 			);
 			path = SqliteLib;
+			sourceTree = "<group>";
+		};
+		59F5D15C207C37A200E961CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59F5D15D207C37E300E961CE /* BaseModel.cpp */,
+				59F5D15E207C37E300E961CE /* BaseModel.hpp */,
+				59F5D160207C3A7400E961CE /* Project.cpp */,
+				59F5D161207C3A7400E961CE /* Project.hpp */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8293D06B07D754DEBC785A84 /* Pods */ = {
@@ -549,6 +572,7 @@
 				59F5D144207B09C600E961CE /* Column.cpp in Sources */,
 				59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */,
 				59F5D10E20799B7A00E961CE /* JDStatusBarStyle.m in Sources */,
+				59F5D162207C3A7400E961CE /* Project.cpp in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
 				59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */,
 				59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */,
@@ -557,12 +581,14 @@
 				59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */,
 				59F5D104207992D800E961CE /* NSString+CppStr.mm in Sources */,
 				59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */,
+				59F5D15B207BC51300E961CE /* DBManager.cpp in Sources */,
 				59F5D127207A046800E961CE /* PathController.m in Sources */,
 				59F5D11920799B8800E961CE /* TWMessageBarManager.m in Sources */,
 				59F5D10D20799B7A00E961CE /* JDStatusBarView.m in Sources */,
 				59F5D14A207B1EAC00E961CE /* Database.cpp in Sources */,
 				59F5D155207B85F500E961CE /* Backup.cpp in Sources */,
 				59F51B3420747455004AFBE3 /* CreateProjectController.mm in Sources */,
+				59F5D15F207C37E300E961CE /* BaseModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
