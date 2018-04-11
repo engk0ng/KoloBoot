@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <memory>
+#import "HomeProtocol.h"
 
 class DBManager;
 
 @interface PathController : UIViewController
 @property (assign) std::shared_ptr<DBManager> dbase;
+@property (weak) id<HomeProtocol> delegate;
 @property (nonatomic, weak) IBOutlet UITextField *namaRequestField;
 @property (nonatomic, weak) IBOutlet UITextField *pathField;
 @property (nonatomic, weak) IBOutlet UIButton *typeBtn;

@@ -9,20 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <map>
 #import <string>
+#import "HomeProtocol.h"
+#import "Project.hpp"
 
 class DBManager;
 
-@protocol CreateProjectControllerDelegate <NSObject>
-@optional
-- (void)saveDataProject:(std::map<std::string, std::string>)dta;
-@end
-
 @interface CreateProjectController : UIViewController <UITextFieldDelegate>
 @property (assign) std::shared_ptr<DBManager> dbase;
-@property (weak) id<CreateProjectControllerDelegate> delegate;
+@property (weak) id<HomeProtocol> delegate;
 @property (nonatomic, weak) IBOutlet UITextField *baseUrlField;
 @property (nonatomic, weak) IBOutlet UITextField *nameField;
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *contentView;
+@property (nonatomic, assign) Model::Project project;
 
 @end

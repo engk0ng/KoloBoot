@@ -62,6 +62,9 @@
                 [[AppDelegate sharedAppdelegate] messageNotification:@"Success" description:@"Path request berhasil disimpan" visible:YES delay:4 type:TWMessageBarMessageTypeSuccess errorCode:0];
                 _namaRequestField.text = @"";
                 _pathField.text = @"";
+                if ([_delegate respondsToSelector:@selector(refreshDataProject)]) {
+                    [_delegate refreshDataProject];
+                }
                 return;
             }
             else {

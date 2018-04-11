@@ -17,6 +17,12 @@
 #include "Path.hpp"
 
 typedef std::function<void(int)> PathSaveCallback;
+typedef std::vector<Model::Path> DataPath;
+typedef std::vector<Model::Project> DataProject;
+
+typedef std::function<int(const Model::Project&)> FuncProjectSave;
+typedef std::function<DataProject()> FuncProjectGetAll;
+typedef std::function<DataPath(int)> FuncPathGetByIdProj;
 
 class DBManager {
     
@@ -24,8 +30,11 @@ public:
     DBManager();
     ~DBManager();
     std::function<int()> countDataProject();
-    std::function<int(const Model::Project&)> saveProject();
+    FuncProjectSave saveProject();
     void savePath(const Model::Path&, PathSaveCallback);
+    FuncProjectGetAll getAllProject();
+    FuncPathGetByIdProj getPathByIdProject();
+    FuncProjectSave updateProject();
 private:
     SQLite::Database *dbase;
 };

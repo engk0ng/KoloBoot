@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1519A3B5481A50DFA8367093 /* libPods-KoloBoot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */; };
+		598A6888207DC7FA001F5918 /* ProjectSectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 598A6886207DC7FA001F5918 /* ProjectSectionHeaderCell.m */; };
+		598A6889207DC7FA001F5918 /* ProjectSectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A6887207DC7FA001F5918 /* ProjectSectionHeaderCell.xib */; };
+		598A688D207DD1F1001F5918 /* PathCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 598A688B207DD1F1001F5918 /* PathCell.m */; };
+		598A688E207DD1F1001F5918 /* PathCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A688C207DD1F1001F5918 /* PathCell.xib */; };
+		598A6894207E135D001F5918 /* Utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 598A6893207E135D001F5918 /* Utils.mm */; };
 		59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */; };
 		59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D99206FFD9E00AB5C2B /* ViewController.mm */; };
 		59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E04D9B206FFD9E00AB5C2B /* Main.storyboard */; };
@@ -65,6 +70,15 @@
 /* Begin PBXFileReference section */
 		23FBFE2418DFF8B808F21824 /* Pods-KoloBoot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoloBoot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot.debug.xcconfig"; sourceTree = "<group>"; };
 		43BA6EFDC29602E0D81183BA /* Pods-KoloBoot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoloBoot.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot.release.xcconfig"; sourceTree = "<group>"; };
+		598A6885207DC7FA001F5918 /* ProjectSectionHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectSectionHeaderCell.h; sourceTree = "<group>"; };
+		598A6886207DC7FA001F5918 /* ProjectSectionHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectSectionHeaderCell.m; sourceTree = "<group>"; };
+		598A6887207DC7FA001F5918 /* ProjectSectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectSectionHeaderCell.xib; sourceTree = "<group>"; };
+		598A688B207DD1F1001F5918 /* PathCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathCell.m; sourceTree = "<group>"; };
+		598A688C207DD1F1001F5918 /* PathCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathCell.xib; sourceTree = "<group>"; };
+		598A688F207DD6D4001F5918 /* PathCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathCell.h; sourceTree = "<group>"; };
+		598A6891207DDCF6001F5918 /* HomeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeProtocol.h; sourceTree = "<group>"; };
+		598A6892207E135D001F5918 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		598A6893207E135D001F5918 /* Utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Utils.mm; sourceTree = "<group>"; };
 		59E04D92206FFD9E00AB5C2B /* KoloBoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoloBoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E04D95206FFD9E00AB5C2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -179,6 +193,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		598A6884207DC761001F5918 /* TableHome */ = {
+			isa = PBXGroup;
+			children = (
+				598A6885207DC7FA001F5918 /* ProjectSectionHeaderCell.h */,
+				598A6886207DC7FA001F5918 /* ProjectSectionHeaderCell.m */,
+				598A6887207DC7FA001F5918 /* ProjectSectionHeaderCell.xib */,
+				598A688F207DD6D4001F5918 /* PathCell.h */,
+				598A688B207DD1F1001F5918 /* PathCell.m */,
+				598A688C207DD1F1001F5918 /* PathCell.xib */,
+			);
+			path = TableHome;
+			sourceTree = "<group>";
+		};
+		598A6890207DDCDA001F5918 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				598A6891207DDCF6001F5918 /* HomeProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		59E04D89206FFD9E00AB5C2B = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +235,7 @@
 		59E04D94206FFD9E00AB5C2B /* KoloBoot */ = {
 			isa = PBXGroup;
 			children = (
+				598A6890207DDCDA001F5918 /* Protocol */,
 				59F5D15C207C37A200E961CE /* Model */,
 				59F51B3020747424004AFBE3 /* Controller */,
 				59F51B21207459AA004AFBE3 /* Custom */,
@@ -287,6 +323,8 @@
 				59F51B1920744FDF004AFBE3 /* helper_onc.c */,
 				59F5D159207BC51300E961CE /* DBManager.cpp */,
 				59F5D15A207BC51300E961CE /* DBManager.hpp */,
+				598A6892207E135D001F5918 /* Utils.h */,
+				598A6893207E135D001F5918 /* Utils.mm */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -343,6 +381,7 @@
 		59F51B3520747DD4004AFBE3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				598A6884207DC761001F5918 /* TableHome */,
 				59E04D98206FFD9E00AB5C2B /* ViewController.h */,
 				59E04D99206FFD9E00AB5C2B /* ViewController.mm */,
 			);
@@ -533,8 +572,10 @@
 				59F5D17C207CAEDE00E961CE /* RequestPopupController.xib in Resources */,
 				59F5D11F20799B8800E961CE /* icon-success.png in Resources */,
 				59F51B1C2074565D004AFBE3 /* GoogleService-Info.plist in Resources */,
+				598A688E207DD1F1001F5918 /* PathCell.xib in Resources */,
 				59F5D11B20799B8800E961CE /* icon-error.png in Resources */,
 				59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */,
+				598A6889207DC7FA001F5918 /* ProjectSectionHeaderCell.xib in Resources */,
 				59F5D168207C56A100E961CE /* rest.sqlite in Resources */,
 				59F5D11A20799B8800E961CE /* icon-info@2x.png in Resources */,
 				59F5D11D20799B8800E961CE /* icon-success@2x.png in Resources */,
@@ -606,6 +647,7 @@
 				59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */,
 				59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */,
 				59F5D180207CCCF800E961CE /* TypeRequestCell.m in Sources */,
+				598A688D207DD1F1001F5918 /* PathCell.m in Sources */,
 				59F5D14F207B555C00E961CE /* Transaction.cpp in Sources */,
 				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
 				59F5D144207B09C600E961CE /* Column.cpp in Sources */,
@@ -626,10 +668,12 @@
 				59F5D127207A046800E961CE /* PathController.mm in Sources */,
 				59F5D11920799B8800E961CE /* TWMessageBarManager.m in Sources */,
 				59F5D10D20799B7A00E961CE /* JDStatusBarView.m in Sources */,
+				598A6888207DC7FA001F5918 /* ProjectSectionHeaderCell.m in Sources */,
 				59F5D16E207C6D0500E961CE /* Path.cpp in Sources */,
 				59F5D14A207B1EAC00E961CE /* Database.cpp in Sources */,
 				59F5D155207B85F500E961CE /* Backup.cpp in Sources */,
 				59F51B3420747455004AFBE3 /* CreateProjectController.mm in Sources */,
+				598A6894207E135D001F5918 /* Utils.mm in Sources */,
 				59F5D15F207C37E300E961CE /* BaseModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

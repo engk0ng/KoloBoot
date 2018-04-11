@@ -128,3 +128,7 @@ const std::string Koloboot::Helper::fileBundleLocation(const std::string &file) 
     CFRelease(locUrl);
     return std::string(path);
 }
+
+CFStringRef Koloboot::Helper::toCFString(const std::string &str) {
+    return CFStringCreateWithCString(kCFAllocatorDefault, str.c_str(), kCFStringEncodingUTF8);
+}

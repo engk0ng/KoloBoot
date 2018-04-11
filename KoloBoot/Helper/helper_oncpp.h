@@ -81,6 +81,7 @@ namespace Koloboot {
         std::string fileInfoLocation(const std::string& file);
         const std::string fileBundleLocation(const std::string& file);
         const std::vector<std::string> splitStr(const std::string& str, char delim);
+        CFStringRef toCFString(const std::string& str);
     }
 }
 

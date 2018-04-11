@@ -12,7 +12,7 @@
 #import "ProgressView.h"
 #import "PathController.h"
 #import "DBManager.hpp"
-#import "Project.hpp"
+#import "Utils.h"
 
 @interface CreateProjectController ()
 @end
@@ -23,8 +23,19 @@
     [super viewDidLoad];
     _nameField.delegate = self;
     _baseUrlField.delegate = self;
-    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction:)]];
+    NSString *lblBtn = @"";
+    if (_project.getName().empty()) {
+        lblBtn = @"Next";
+    }
+    else {
+        lblBtn = @"Update";
+    }
+    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:lblBtn style:UIBarButtonItemStylePlain target:self action:@selector(saveAction:)]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangingFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    if (!_project.getName().empty()) {
+        _nameField.text = [Utils toNSString:_project.getName()];
+        _baseUrlField.text = [Utils toNSString:_project.getBaseUrl()];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -71,17 +82,37 @@
         return;
     }
     else {
-        auto saves = dbase->saveProject();
-        int last_id = saves(proj);
+        int last_id = 0;
+        if (_project.getName().empty()) {
+            auto saves = dbase->saveProject();
+            last_id = saves(proj);
+        }
+        else {
+            _project.setName([_nameField.text toStdString]);
+            _project.setBaseUrl([_baseUrlField.text toStdString]);
+            auto saves = dbase->updateProject();
+            last_id = saves(_project);
+        }
+        
         if (last_id != 0) {
-            _nameField.text = @"";
-            _baseUrlField.text = @"";
-            PathController *pathVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PathController"];
-            pathVC.preferredContentSize = CGSizeMake(320, 280);
-            pathVC.title = @"Insert Request";
-            pathVC.lastId = last_id;
-            pathVC.dbase = dbase;
-            [self.navigationController pushViewController:pathVC animated:YES];
+            if ([_delegate respondsToSelector:@selector(refreshDataProject)]) {
+                [_delegate refreshDataProject];
+            }
+            if (_project.getName().empty()) {
+                _nameField.text = @"";
+                _baseUrlField.text = @"";
+                PathController *pathVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PathController"];
+                pathVC.preferredContentSize = CGSizeMake(320, 280);
+                pathVC.title = @"Insert Request";
+                pathVC.lastId = last_id;
+                pathVC.dbase = dbase;
+                pathVC.delegate = _delegate;
+                [self.navigationController pushViewController:pathVC animated:YES];
+            }
+            else
+            {
+                [[AppDelegate sharedAppdelegate] messageNotification:@"Success" description:@"Data project berhasil diubah" visible:YES delay:4 type:TWMessageBarMessageTypeSuccess errorCode:0];
+            }
         }
         else {
             [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:@"Data gagal disimpan" visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];

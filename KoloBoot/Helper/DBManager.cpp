@@ -42,7 +42,7 @@ std::function<int()> DBManager::countDataProject()
     };
 }
 
-std::function<int(const Model::Project&)> DBManager::saveProject()
+FuncProjectSave DBManager::saveProject()
 {
     return [&](const Model::Project& proj) -> int
     {
@@ -80,4 +80,69 @@ void DBManager::savePath(const Model::Path &pth, PathSaveCallback callback)
     } catch (std::exception& ex) {
         std::cout << ex.what() << std::endl;
     }
+}
+
+FuncProjectGetAll DBManager::getAllProject() {
+    return [&]() -> DataProject
+    {
+        DataProject result;
+        try {
+            SQLite::Statement query(*dbase, "select * from projects");
+            while (query.executeStep()) {
+                Model::Project proj;
+                proj.setId(query.getColumn("id_project").getInt());
+                proj.setName(query.getColumn("name").getString());
+                auto dataPath = getPathByIdProject();
+                proj.setPaths(dataPath(proj.getId()));
+                proj.setBaseUrl(query.getColumn("base_url").getString());
+                result.push_back(proj);
+            }
+            return result;
+            
+        } catch (std::exception& ex) {
+            std::cout << ex.what() << std::endl;
+        }
+        return result;
+    };
+}
+
+FuncPathGetByIdProj DBManager::getPathByIdProject() {
+    return [&](int id_proj) -> DataPath
+    {
+        DataPath result;
+        try {
+            SQLite::Statement query(*dbase, "select * from paths where project_id = ?");
+            query.bind(1, id_proj);
+            while (query.executeStep()) {
+                Model::Path path;
+                path.setId(query.getColumn("id_path").getInt());
+                path.setName(query.getColumn("name").getString());
+                path.setPath(query.getColumn("path_url").getString());
+                path.setType(query.getColumn("type").getString());
+                path.setProjectId(query.getColumn("project_id").getInt());
+                result.push_back(path);
+            }
+            return result;
+        } catch (std::exception& ex) {
+            std::cout << ex.what() << std::endl;
+        }
+        return result;
+    };
+}
+
+FuncProjectSave DBManager::updateProject() {
+    return [&](const Model::Project& proj) -> int
+    {
+        int result = 0;
+        try {
+            SQLite::Statement query(*dbase, "update projects set name = ?, base_url = ? where id_project = ?");
+            query.bind(1, proj.getName());
+            query.bind(2, proj.getBaseUrl());
+            query.bind(3, proj.getId());
+            result = query.exec();
+        } catch (std::exception& ex) {
+            std::cout << ex.what() << std::endl;
+        }
+        return result;
+    };
 }
