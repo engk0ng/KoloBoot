@@ -10,8 +10,11 @@
 #import "RequestPopupController.h"
 #import "DBManager.hpp"
 #import "Path.hpp"
+#import "AppDelegate.h"
+#import "NSString+CppStr.h"
+#import <iostream>
 
-@interface PathController ()
+@interface PathController () <RequestPopupControllerDelegate, UITextFieldDelegate>
 
 @end
 
@@ -19,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _namaRequestField.delegate = self;
+    _pathField.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -29,11 +34,59 @@
 
 - (IBAction)chooseRequestAction:(id)sender {
     RequestPopupController *reqPop = [[RequestPopupController alloc] initWithNibName:@"RequestPopupController" bundle:nil];
+    reqPop.delegate = self;
     [reqPop show];
-    Model::Path pth;
-    pth.setType("makan");
+}
+
+- (IBAction)savePathAction:(id)sender {
+    BOOL status = YES;
+    if ([_namaRequestField.text isEqualToString:@""]) {
+        status = NO;
+        [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:@"Nama request tidak boleh kosong" visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+        return;
+    }
+    if ([_pathField.text isEqualToString:@""]) {
+        status = NO;
+        [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:@"Request path tidak boleh kosong" visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+        return;
+    }
     
-    std::cout << pth.getType<std::string>() << std::endl;
+    if (status) {
+        Model::Path path;
+        path.setName([_namaRequestField.text toStdString]);
+        path.setPath([_pathField.text toStdString]);
+        path.setType([_typeBtn.titleLabel.text toStdString]);
+        path.setProjectId(_lastId);
+        _dbase->savePath(path, [&](int res){
+            if (res > 0) {
+                [[AppDelegate sharedAppdelegate] messageNotification:@"Success" description:@"Path request berhasil disimpan" visible:YES delay:4 type:TWMessageBarMessageTypeSuccess errorCode:0];
+                _namaRequestField.text = @"";
+                _pathField.text = @"";
+                return;
+            }
+            else {
+                [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:@"Path request gagal disimpan" visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+                return;
+            }
+        });
+    }
+}
+
+#pragma mark - RequestPopupControllerDelegate
+
+- (void)sendTypeSelected:(NSString *)txt {
+    [_typeBtn setTitle:txt forState:UIControlStateNormal];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)dealloc {
+    _dbase.reset();
 }
 /*
 #pragma mark - Navigation

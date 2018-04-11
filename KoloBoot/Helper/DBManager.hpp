@@ -14,6 +14,9 @@
 #include <functional>
 #include "SQLiteCpp.h"
 #include "Project.hpp"
+#include "Path.hpp"
+
+typedef std::function<void(int)> PathSaveCallback;
 
 class DBManager {
     
@@ -22,6 +25,7 @@ public:
     ~DBManager();
     std::function<int()> countDataProject();
     std::function<int(const Model::Project&)> saveProject();
+    void savePath(const Model::Path&, PathSaveCallback);
 private:
     SQLite::Database *dbase;
 };

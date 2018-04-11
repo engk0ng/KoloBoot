@@ -72,10 +72,15 @@
     }
     else {
         auto saves = dbase->saveProject();
-        if (saves(proj) != 0) {
+        int last_id = saves(proj);
+        if (last_id != 0) {
+            _nameField.text = @"";
+            _baseUrlField.text = @"";
             PathController *pathVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PathController"];
             pathVC.preferredContentSize = CGSizeMake(320, 280);
             pathVC.title = @"Insert Request";
+            pathVC.lastId = last_id;
+            pathVC.dbase = dbase;
             [self.navigationController pushViewController:pathVC animated:YES];
         }
         else {

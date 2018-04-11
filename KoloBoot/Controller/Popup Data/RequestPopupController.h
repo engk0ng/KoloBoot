@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol RequestPopupControllerDelegate <NSObject>
+@optional
+- (void)sendTypeSelected:(NSString *)txt;
+@end
+
 @interface RequestPopupController : UIViewController
+@property (weak) id<RequestPopupControllerDelegate> delegate;
 @property (nonatomic, weak) IBOutlet UITableView *typeTableView;
 - (void)show;
 - (void)dismiss;

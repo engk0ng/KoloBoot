@@ -17,6 +17,7 @@ namespace Model {
     public:
         BaseModel(int, const std::string&);
         BaseModel(const std::string&);
+        BaseModel(int);
         BaseModel();
         virtual ~BaseModel();
         virtual void setName(const std::string&);

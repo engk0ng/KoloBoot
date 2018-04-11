@@ -28,7 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     manager = std::make_shared<DBManager>();
-    std::cout << std::is_same<std::string, std::string>::value << '\n';
     //_dbase = std::make_shared<FirebaseDatabase>(new FirebaseDatabase());
     // Do any additional setup after loading the view, typically from a nib.
 }

@@ -13,4 +13,8 @@ class DBManager;
 
 @interface PathController : UIViewController
 @property (assign) std::shared_ptr<DBManager> dbase;
+@property (nonatomic, weak) IBOutlet UITextField *namaRequestField;
+@property (nonatomic, weak) IBOutlet UITextField *pathField;
+@property (nonatomic, weak) IBOutlet UIButton *typeBtn;
+@property (nonatomic, assign) int lastId;
 @end

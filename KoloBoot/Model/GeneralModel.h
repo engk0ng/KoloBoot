@@ -6,8 +6,8 @@
 //  Copyright © 2018 Abu Muhammad. All rights reserved.
 //
 
-#ifndef GeneralModel_hpp
-#define GeneralModel_hpp
+#ifndef GeneralModel_h
+#define GeneralModel_h
 
 #include <stdio.h>
 #include <type_traits>
@@ -62,4 +62,4 @@ namespace Model {
     };
 }
 
-#endif /* GeneralModel_hpp */
+#endif /* GeneralModel_h */

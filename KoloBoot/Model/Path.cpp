@@ -56,5 +56,20 @@ namespace Model {
     {
         return project_id;
     }
+    
+    void Path::setParams(const std::vector<Model::Param> &par)
+    {
+        params = par;
+    }
+    
+    std::vector<Model::Param> Path::getParams() const noexcept
+    {
+        return params;
+    }
+    
+    std::ostream& operator<<(std::ostream &os, const Model::Path& pth) {
+        os << "[" << pth.getId() <<" "<< pth.getName() <<" "<< pth.getProjectId() << " " << pth.getPath() << " " << pth.getType<std::string>() << "]";
+        return os;
+    }
 }
 

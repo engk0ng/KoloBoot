@@ -116,7 +116,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *str = typeReq.at(indexPath.row);
+    if ([_delegate respondsToSelector:@selector(sendTypeSelected:)]) {
+        [_delegate sendTypeSelected:str];
+        typeReq.clear();
+    }
     [self dismiss];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
 }
 /*
 #pragma mark - Navigation

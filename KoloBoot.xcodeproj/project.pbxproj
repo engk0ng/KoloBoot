@@ -59,7 +59,7 @@
 		59F5D17C207CAEDE00E961CE /* RequestPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D17A207CAEDE00E961CE /* RequestPopupController.xib */; };
 		59F5D180207CCCF800E961CE /* TypeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D17E207CCCF800E961CE /* TypeRequestCell.m */; };
 		59F5D181207CCCF800E961CE /* TypeRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F5D17F207CCCF800E961CE /* TypeRequestCell.xib */; };
-		59F5D184207CE38500E961CE /* GeneralModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D182207CE38500E961CE /* GeneralModel.cpp */; };
+		59F5D187207D0A6400E961CE /* Param.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F5D185207D0A6400E961CE /* Param.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,8 +154,9 @@
 		59F5D17D207CCCF800E961CE /* TypeRequestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeRequestCell.h; sourceTree = "<group>"; };
 		59F5D17E207CCCF800E961CE /* TypeRequestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeRequestCell.m; sourceTree = "<group>"; };
 		59F5D17F207CCCF800E961CE /* TypeRequestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeRequestCell.xib; sourceTree = "<group>"; };
-		59F5D182207CE38500E961CE /* GeneralModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GeneralModel.cpp; sourceTree = "<group>"; };
-		59F5D183207CE38500E961CE /* GeneralModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GeneralModel.hpp; sourceTree = "<group>"; };
+		59F5D183207CE38500E961CE /* GeneralModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralModel.h; sourceTree = "<group>"; };
+		59F5D185207D0A6400E961CE /* Param.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Param.cpp; sourceTree = "<group>"; };
+		59F5D186207D0A6400E961CE /* Param.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Param.hpp; sourceTree = "<group>"; };
 		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -434,8 +435,9 @@
 				59F5D161207C3A7400E961CE /* Project.hpp */,
 				59F5D16C207C6D0500E961CE /* Path.cpp */,
 				59F5D16D207C6D0500E961CE /* Path.hpp */,
-				59F5D182207CE38500E961CE /* GeneralModel.cpp */,
-				59F5D183207CE38500E961CE /* GeneralModel.hpp */,
+				59F5D183207CE38500E961CE /* GeneralModel.h */,
+				59F5D185207D0A6400E961CE /* Param.cpp */,
+				59F5D186207D0A6400E961CE /* Param.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -608,12 +610,12 @@
 				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
 				59F5D144207B09C600E961CE /* Column.cpp in Sources */,
 				59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */,
+				59F5D187207D0A6400E961CE /* Param.cpp in Sources */,
 				59F5D10E20799B7A00E961CE /* JDStatusBarStyle.m in Sources */,
 				59F5D162207C3A7400E961CE /* Project.cpp in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
 				59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */,
 				59F5D17B207CAEDE00E961CE /* RequestPopupController.mm in Sources */,
-				59F5D184207CE38500E961CE /* GeneralModel.cpp in Sources */,
 				59F51B0220738F5C004AFBE3 /* helper_oncpp.cc in Sources */,
 				59F51AE120738CF2004AFBE3 /* restclient.cc in Sources */,
 				59F5D10C20799B7A00E961CE /* JDStatusBarNotification.m in Sources */,
