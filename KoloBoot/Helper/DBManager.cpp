@@ -146,3 +146,89 @@ FuncProjectSave DBManager::updateProject() {
         return result;
     };
 }
+
+void DBManager::deleteProject(const Model::Project &proj, ProjectDeleteCallback callback) {
+    try {
+        SQLite::Transaction trans(*dbase);
+        std::string qry = "delete from projects where id_project = ";
+        int nb = dbase->exec(qry + std::to_string(proj.getId()));
+        if (nb == 1) {
+            auto get_param = [&](int id_proj) -> int {
+                int result = 0;
+                SQLite::Statement query(*dbase, "select id_path from paths where project_id = ? limit 1");
+                query.bind(1, id_proj);
+                while (query.executeStep()) {
+                    result = query.getColumn("id_path").getInt();
+                }
+                return result;
+            };
+            int id_path = get_param(proj.getId());
+            if (id_path > 0) {
+                std::string qry2 = "delete from paths where project_id = ";
+                nb = dbase->exec(qry2 + std::to_string(proj.getId()));
+            }
+            auto count_param = [&](int id_pth) -> int {
+                int result = 0;
+                SQLite::Statement query(*dbase, "select count(id_param) as hit from param where path_id = ?");
+                query.bind(1, id_pth);
+                while (query.executeStep()) {
+                    result = query.getColumn("hit").getInt();
+                }
+                return result;
+            };
+            int hit_param;
+            if ((hit_param = count_param(id_path)) > 0) {
+                std::string qry3 = "delete from param where path_id = ";
+                nb = dbase->exec(qry3 + std::to_string(id_path));
+            }
+        }
+        trans.commit();
+        callback(nb);
+    } catch (std::exception& ex) {
+        std::cout << ex.what() << std::endl;
+    }
+}
+
+void DBManager::deletePath(const Model::Path &pth, DeletePathCallback callback) {
+    try {
+        SQLite::Transaction trans(*dbase);
+        std::string qry = "delete from paths where id_path = ";
+        int nb = dbase->exec(qry + std::to_string(pth.getId()));
+        if (nb == 1) {
+            auto count_param = [&](int id_pth) -> int {
+                int result = 0;
+                SQLite::Statement query(*dbase, "select count(id_param) as hit from param where path_id = ?");
+                query.bind(1, id_pth);
+                while (query.executeStep()) {
+                    result = query.getColumn("hit").getInt();
+                }
+                return result;
+            };
+            int hit = 0;
+            if ((hit = count_param(pth.getId())) > 0) {
+                std::string qry3 = "delete from param where path_id = ";
+                nb = dbase->exec(qry3 + std::to_string(pth.getId()));
+            }
+        }
+        trans.commit();
+        callback(nb);
+    } catch (std::exception& ex) {
+        std::cout << ex.what() << std::endl;
+    }
+}
+
+void DBManager::getProjectById(int id, ProjectByIdCallback callback) {
+    try {
+        Model::Project result;
+        SQLite::Statement query(*dbase, "select * from projects where id_project = ?");
+        query.bind(1, id);
+        while (query.executeStep()) {
+            result.setBaseUrl(query.getColumn("base_url").getString());
+            result.setId(id);
+            result.setName(query.getColumn("name").getString());
+        }
+        callback(result);
+    } catch (std::exception& ex) {
+        std::cout << ex.what() << std::endl;
+    }
+}

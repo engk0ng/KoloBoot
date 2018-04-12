@@ -14,6 +14,10 @@
 #include "GeneralModel.h"
 
 namespace Model {
+    
+    const int TYPE_QUERY = 1;
+    const int TYPE_HEADER = 2;
+    
     class Param: public Model::BaseModel, public Model::GeneralModel {
     public:
         Param();

@@ -18,6 +18,7 @@
 #import "HomeProtocol.h"
 #import "PathController.h"
 #import "Utils.h"
+#import "RequestController.h"
 
 @interface ViewController () <WYPopoverControllerDelegate, HomeProtocol, ProjectSectionHeaderCellDelegate>
 @property (nonatomic, strong) WYPopoverController *createProjectController;
@@ -56,6 +57,8 @@
     
     [_projectTableView registerNib:[UINib nibWithNibName:@"ProjectSectionHeaderCell" bundle:nil] forCellReuseIdentifier:@"projectCell"];
     [_projectTableView registerNib:[UINib nibWithNibName:@"PathCell" bundle:nil] forCellReuseIdentifier:@"pathCell"];
+    
+    _projectTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     //_dbase = std::make_shared<FirebaseDatabase>(new FirebaseDatabase());
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -174,6 +177,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     Model::Path path = _dataProject.at(indexPath.section).getPaths().at(indexPath.row);
     PathCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pathCell"];
     cell.pathNameLbl.text = [NSString stringWithUTF8String:path.getName().c_str()];
@@ -186,7 +190,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 57;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
@@ -194,7 +198,43 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 44;
+    return 55;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Model::Path path = _dataProject.at(indexPath.section).getPaths().at(indexPath.row);
+    RequestController *reqVC = [[RequestController alloc] init];
+    std::string judul = "Request - ";
+    reqVC.title = [Utils toNSString:judul + path.getName()];
+    reqVC.path = path;
+    reqVC.project = _dataProject.at(indexPath.section);
+    [self.navigationController pushViewController:reqVC animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Model::Path path = _dataProject.at(indexPath.section).getPaths().at(indexPath.row);
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Konfirmasi" message:[NSString stringWithFormat:@"Apakah anda yakin akan menghapus '%s'?", path.getName().c_str()] preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            manager->deletePath(path, [&](int res) {
+                if (res > 0) {
+                    [[AppDelegate sharedAppdelegate] messageNotification:@"Success" description:[NSString stringWithFormat:@"Path Request '%s' berhasil dihapus", path.getName().c_str()] visible:YES delay:4 type:TWMessageBarMessageTypeSuccess errorCode:0];
+                    [self refreshDataProject];
+                }
+                else {
+                    [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:[NSString stringWithFormat:@"Path Request '%s' gagal dihapus", path.getName().c_str()] visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+                }
+            });
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 #pragma mark - CreateProjectControllerDelegate
@@ -244,7 +284,15 @@
     NSString *str = [NSString stringWithFormat:@"Apakah anda yakin akan menghapus project %@?", [Utils toNSString:proj.getName()]];
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Konfirmasi" message:str preferredStyle:UIAlertControllerStyleAlert];
     [alertVC addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
+        manager->deleteProject(proj, [&](int res){
+            if (res > 0) {
+                [[AppDelegate sharedAppdelegate] messageNotification:@"Success" description:[NSString stringWithFormat:@"Project '%s' berhasil dihapus", proj.getName().c_str()] visible:YES delay:4 type:TWMessageBarMessageTypeSuccess errorCode:0];
+                [self refreshDataProject];
+            }
+            else {
+                [[AppDelegate sharedAppdelegate] messageNotification:@"Error" description:[NSString stringWithFormat:@"Project '%s' gagal dihapus", proj.getName().c_str()] visible:YES delay:4 type:TWMessageBarMessageTypeError errorCode:0];
+            }
+        });
     }]];
     [alertVC addAction:[UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         

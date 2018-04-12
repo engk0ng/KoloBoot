@@ -18,5 +18,7 @@ class DBManager;
 @property (nonatomic, weak) IBOutlet UITextField *namaRequestField;
 @property (nonatomic, weak) IBOutlet UITextField *pathField;
 @property (nonatomic, weak) IBOutlet UIButton *typeBtn;
+@property (nonatomic, weak) IBOutlet UILabel *baseUrlLbl;
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, assign) int lastId;
 @end

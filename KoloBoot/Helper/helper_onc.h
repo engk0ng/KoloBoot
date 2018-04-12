@@ -17,4 +17,7 @@ typedef enum _type {
     AUTH
 }FirebaseType;
 
+#define BLUE_DEFAULT [UIColor colorWithRed:0 green:0.478431 blue:1 alpha:1]
+#define NAV_DEFAULT_COLOR [UIColor colorWithRed:(247.0f/255.0f) green:(247.0f/255.0f) blue:(247.0f/255.0f) alpha:1]
+
 #endif /* helper_onc_h */

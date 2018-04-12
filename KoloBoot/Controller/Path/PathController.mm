@@ -13,9 +13,11 @@
 #import "AppDelegate.h"
 #import "NSString+CppStr.h"
 #import <iostream>
+#import "Utils.h"
+#import "Project.hpp"
 
 @interface PathController () <RequestPopupControllerDelegate, UITextFieldDelegate>
-
+@property (nonatomic, assign) Model::Project project;
 @end
 
 @implementation PathController
@@ -24,6 +26,11 @@
     [super viewDidLoad];
     _namaRequestField.delegate = self;
     _pathField.delegate = self;
+    _dbase->getProjectById(_lastId, [&](Model::Project proj){
+        _project = proj;
+    });
+    _baseUrlLbl.text = [NSString stringWithFormat:@"Base URL: %s", _project.getBaseUrl().c_str()];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangingFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     // Do any additional setup after loading the view.
 }
 
@@ -88,8 +95,30 @@
     return YES;
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if ([textField isEqual:_pathField]) {
+        std::string bs;
+        size_t length = _project.getBaseUrl().length();
+        if (_project.getBaseUrl().at(length - 1) != '/') {
+            bs = "/";
+        }
+        textField.text = [Utils toNSString:bs];
+    }
+}
+
 - (void)dealloc {
     _dbase.reset();
+}
+
+#pragma mark - Helper
+
+- (void)keyboardChangingFrame:(NSNotification *)notif {
+    NSDictionary *info = [notif userInfo];
+    CGRect keyboardEndFram = [info[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat offset = [[UIScreen mainScreen] bounds].size.height - CGRectGetMinY(keyboardEndFram) - 60;
+    UIEdgeInsets inset = _scrollView.contentInset;
+    inset.bottom = offset;
+    _scrollView.contentInset = inset;
 }
 /*
 #pragma mark - Navigation

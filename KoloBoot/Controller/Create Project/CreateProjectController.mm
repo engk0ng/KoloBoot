@@ -51,6 +51,10 @@
     return YES;
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    textField.text = @"https://";
+}
+
 #pragma mark - Helper
 
 - (void)keyboardChangingFrame:(NSNotification *)notif {

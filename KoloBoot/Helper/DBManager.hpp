@@ -17,8 +17,11 @@
 #include "Path.hpp"
 
 typedef std::function<void(int)> PathSaveCallback;
+typedef PathSaveCallback ProjectDeleteCallback;
 typedef std::vector<Model::Path> DataPath;
 typedef std::vector<Model::Project> DataProject;
+typedef PathSaveCallback DeletePathCallback;
+typedef std::function<void(Model::Project)> ProjectByIdCallback;
 
 typedef std::function<int(const Model::Project&)> FuncProjectSave;
 typedef std::function<DataProject()> FuncProjectGetAll;
@@ -35,6 +38,9 @@ public:
     FuncProjectGetAll getAllProject();
     FuncPathGetByIdProj getPathByIdProject();
     FuncProjectSave updateProject();
+    void deleteProject(const Model::Project&, ProjectDeleteCallback);
+    void deletePath(const Model::Path&, DeletePathCallback);
+    void getProjectById(int, ProjectByIdCallback);
 private:
     SQLite::Database *dbase;
 };
