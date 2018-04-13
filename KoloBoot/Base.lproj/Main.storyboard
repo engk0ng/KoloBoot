@@ -133,6 +133,9 @@
                                                     <state key="normal" title="Cancel">
                                                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="cancelAction:" destination="pd5-5C-8K2" eventType="touchUpInside" id="Sfb-NU-Odt"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV6-vA-nMF">
                                                     <rect key="frame" x="243" y="6" width="75" height="30"/>
@@ -141,6 +144,9 @@
                                                         <constraint firstAttribute="width" constant="75" id="ESH-EF-SUd"/>
                                                     </constraints>
                                                     <state key="normal" title="Save"/>
+                                                    <connections>
+                                                        <action selector="saveAction:" destination="pd5-5C-8K2" eventType="touchUpInside" id="qBs-ko-4vG"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

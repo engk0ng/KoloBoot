@@ -63,6 +63,7 @@
 - (HeadersView *)headersView {
     if (!_headersView) {
         _headersView = [self.nibBundle loadNibNamed:@"HeadersView" owner:nil options:nil].firstObject;
+        _headersView.conntrollerDelegate = self;
     }
     return _headersView;
 }
@@ -111,7 +112,7 @@
     return nav;
 }
 
-- (void)presentFormSheetControllerWithTransition:(NSInteger)transition {
+- (void)presentFormSheetControllerWithTransition:(NSInteger)transition type:(int)tp {
     UINavigationController *navigationController = [self formSheetControllerWithNavigationController];
     MZFormSheetPresentationViewController *formSheetController = [[MZFormSheetPresentationViewController alloc] initWithContentViewController:navigationController];
     formSheetController.presentationController.shouldDismissOnBackgroundViewTap = NO;
@@ -119,11 +120,11 @@
     formSheetController.presentationController.shouldCenterVertically = YES;
     formSheetController.presentationController.movementActionWhenKeyboardAppears = MZFormSheetActionWhenKeyboardAppearsMoveToTopInset;
     UIViewController *controllerPresented = [[navigationController viewControllers] firstObject];
-    if ([controllerPresented isKindOfClass:[InputParamController class]]) {
-        InputParamController *inputVC = (InputParamController *)controllerPresented;
-        inputVC.textFieldBecomeFirstResponder = YES;
-    }
-    
+    Model::Param param;
+    InputParamController *inputVC = (InputParamController *)controllerPresented;
+    inputVC.textFieldBecomeFirstResponder = YES;
+    param.setType(tp);
+    inputVC.param = param;
     __weak typeof(formSheetController) weakFormSheet = formSheetController;
     formSheetController.presentationController.frameConfigurationHandler = ^CGRect(UIView * _Nonnull presentedView, CGRect currentFrame, BOOL isKeyboardVisible) {
         return CGRectMake(CGRectGetMidX(weakFormSheet.presentationController.containerView.bounds) - (currentFrame.size.width / 2), currentFrame.origin.y, currentFrame.size.width, 190);

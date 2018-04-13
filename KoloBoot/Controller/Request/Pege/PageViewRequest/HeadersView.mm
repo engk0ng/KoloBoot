@@ -1,30 +1,30 @@
 //
-//  QueryParamView.m
+//  HeadersView.m
 //  KoloBoot
 //
 //  Created by Abu Muhammad on 11/04/18.
 //  Copyright © 2018 Abu Muhammad. All rights reserved.
 //
 
-#import "QueryParamView.h"
+#import "HeadersView.h"
 #import "FooterCell.h"
 #import "HeaderCell.h"
 #import "QueryParamCell.h"
 #import "helper_onc.h"
 #import "PageRequestController.h"
 
-@interface QueryParamView() <FooterCellDelegate>
+@interface HeadersView() <FooterCellDelegate>
 @end
 
-@implementation QueryParamView
+@implementation HeadersView
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _queryTableView.delegate = self;
-    _queryTableView.delegate = self;
-    [_queryTableView registerNib:[UINib nibWithNibName:@"QueryParamCell" bundle:nil] forCellReuseIdentifier:@"queryCell"];
-    [_queryTableView registerNib:[UINib nibWithNibName:@"FooterCell" bundle:nil] forCellReuseIdentifier:@"footerCell"];
-    [_queryTableView registerNib:[UINib nibWithNibName:@"HeaderCell" bundle:nil] forCellReuseIdentifier:@"headerCell"];
+    _headersTableView.delegate = self;
+    _headersTableView.delegate = self;
+    [_headersTableView registerNib:[UINib nibWithNibName:@"QueryParamCell" bundle:nil] forCellReuseIdentifier:@"queryCell"];
+    [_headersTableView registerNib:[UINib nibWithNibName:@"FooterCell" bundle:nil] forCellReuseIdentifier:@"footerCell"];
+    [_headersTableView registerNib:[UINib nibWithNibName:@"HeaderCell" bundle:nil] forCellReuseIdentifier:@"headerCell"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -81,7 +81,7 @@
 - (void)showFormInputParam:(FooterCell *)cell {
     if ([_conntrollerDelegate isKindOfClass:[PageRequestController class]]) {
         PageRequestController *page = (PageRequestController *)_conntrollerDelegate;
-        [page presentFormSheetControllerWithTransition:0 type:Model::TYPE_QUERY];
+        [page presentFormSheetControllerWithTransition:0 type:Model::TYPE_HEADER];
     }
 }
 

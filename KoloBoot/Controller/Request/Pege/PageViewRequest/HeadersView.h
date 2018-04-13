@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Param.hpp"
+#import <vector>
 
-@interface HeadersView : UIView
-
+@interface HeadersView : UIView <UITableViewDelegate, UITableViewDataSource>
+@property (weak) id conntrollerDelegate;
+@property (nonatomic, weak) IBOutlet UITableView *headersTableView;
+@property (nonatomic, assign) std::vector<Model::Param> dataParam;
 @end

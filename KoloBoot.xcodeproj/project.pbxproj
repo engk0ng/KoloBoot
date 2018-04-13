@@ -21,7 +21,7 @@
 		598A68AD207F2ABC001F5918 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68AC207F2ABC001F5918 /* TopView.xib */; };
 		598A68B6207F328F001F5918 /* QueryParamView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 598A68B5207F328F001F5918 /* QueryParamView.mm */; };
 		598A68B8207F32AA001F5918 /* QueryParamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68B7207F32AA001F5918 /* QueryParamView.xib */; };
-		598A68BB207F3322001F5918 /* HeadersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598A68BA207F3322001F5918 /* HeadersView.m */; };
+		598A68BB207F3322001F5918 /* HeadersView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 598A68BA207F3322001F5918 /* HeadersView.mm */; };
 		598A68BD207F3346001F5918 /* HeadersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68BC207F3346001F5918 /* HeadersView.xib */; };
 		598A68C0207F3389001F5918 /* AuthorizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598A68BF207F3389001F5918 /* AuthorizationView.m */; };
 		598A68C2207F3397001F5918 /* AuthorizationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68C1207F3397001F5918 /* AuthorizationView.xib */; };
@@ -51,8 +51,12 @@
 		59BA85A6208018F700F58EBF /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA8595208018F700F58EBF /* MZTransition.m */; };
 		59BA85A7208018F700F58EBF /* MZBlurEffectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA8596208018F700F58EBF /* MZBlurEffectAdapter.m */; };
 		59BA85A8208018F700F58EBF /* MZFormSheetContentSizingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA8599208018F700F58EBF /* MZFormSheetContentSizingNavigationController.m */; };
-		59BA85B020802BF900F58EBF /* InputParamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85AF20802BF900F58EBF /* InputParamController.m */; };
+		59BA85B020802BF900F58EBF /* InputParamController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85AF20802BF900F58EBF /* InputParamController.mm */; };
 		59BA85B620803FE100F58EBF /* UITextField+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85B520803FE100F58EBF /* UITextField+Extended.m */; };
+		59BA85CB20808DCD00F58EBF /* UILabel+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85CA20808DCD00F58EBF /* UILabel+Extended.m */; };
+		59BA85EB2080E4A300F58EBF /* IGAutoCompletionToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85E82080E4A200F58EBF /* IGAutoCompletionToolbar.m */; };
+		59BA85EC2080E4A300F58EBF /* IGAutoCompletionToolbarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85E92080E4A200F58EBF /* IGAutoCompletionToolbarLayout.m */; };
+		59BA85ED2080E4A300F58EBF /* IGAutoCompletionToolbarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85EA2080E4A200F58EBF /* IGAutoCompletionToolbarCell.m */; };
 		59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */; };
 		59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D99206FFD9E00AB5C2B /* ViewController.mm */; };
 		59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E04D9B206FFD9E00AB5C2B /* Main.storyboard */; };
@@ -132,7 +136,7 @@
 		598A68B5207F328F001F5918 /* QueryParamView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = QueryParamView.mm; sourceTree = "<group>"; };
 		598A68B7207F32AA001F5918 /* QueryParamView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryParamView.xib; sourceTree = "<group>"; };
 		598A68B9207F3322001F5918 /* HeadersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadersView.h; sourceTree = "<group>"; };
-		598A68BA207F3322001F5918 /* HeadersView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadersView.m; sourceTree = "<group>"; };
+		598A68BA207F3322001F5918 /* HeadersView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HeadersView.mm; sourceTree = "<group>"; };
 		598A68BC207F3346001F5918 /* HeadersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadersView.xib; sourceTree = "<group>"; };
 		598A68BE207F3389001F5918 /* AuthorizationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorizationView.h; sourceTree = "<group>"; };
 		598A68BF207F3389001F5918 /* AuthorizationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorizationView.m; sourceTree = "<group>"; };
@@ -188,9 +192,17 @@
 		59BA859B208018F700F58EBF /* MZFormSheetPresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFormSheetPresentationViewController.h; sourceTree = "<group>"; };
 		59BA859C208018F700F58EBF /* MZMethodSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMethodSwizzler.h; sourceTree = "<group>"; };
 		59BA85AE20802BF900F58EBF /* InputParamController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputParamController.h; sourceTree = "<group>"; };
-		59BA85AF20802BF900F58EBF /* InputParamController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputParamController.m; sourceTree = "<group>"; };
+		59BA85AF20802BF900F58EBF /* InputParamController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InputParamController.mm; sourceTree = "<group>"; };
 		59BA85B420803FE100F58EBF /* UITextField+Extended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extended.h"; sourceTree = "<group>"; };
 		59BA85B520803FE100F58EBF /* UITextField+Extended.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extended.m"; sourceTree = "<group>"; };
+		59BA85C920808DCD00F58EBF /* UILabel+Extended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extended.h"; sourceTree = "<group>"; };
+		59BA85CA20808DCD00F58EBF /* UILabel+Extended.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extended.m"; sourceTree = "<group>"; };
+		59BA85E52080E4A200F58EBF /* IGAutoCompletionToolbarLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAutoCompletionToolbarLayout.h; sourceTree = "<group>"; };
+		59BA85E62080E4A200F58EBF /* IGAutoCompletionToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAutoCompletionToolbar.h; sourceTree = "<group>"; };
+		59BA85E72080E4A200F58EBF /* IGAutoCompletionToolbarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAutoCompletionToolbarCell.h; sourceTree = "<group>"; };
+		59BA85E82080E4A200F58EBF /* IGAutoCompletionToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAutoCompletionToolbar.m; sourceTree = "<group>"; };
+		59BA85E92080E4A200F58EBF /* IGAutoCompletionToolbarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAutoCompletionToolbarLayout.m; sourceTree = "<group>"; };
+		59BA85EA2080E4A200F58EBF /* IGAutoCompletionToolbarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAutoCompletionToolbarCell.m; sourceTree = "<group>"; };
 		59E04D92206FFD9E00AB5C2B /* KoloBoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoloBoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E04D95206FFD9E00AB5C2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -366,7 +378,7 @@
 				598A68B5207F328F001F5918 /* QueryParamView.mm */,
 				598A68B7207F32AA001F5918 /* QueryParamView.xib */,
 				598A68B9207F3322001F5918 /* HeadersView.h */,
-				598A68BA207F3322001F5918 /* HeadersView.m */,
+				598A68BA207F3322001F5918 /* HeadersView.mm */,
 				598A68BC207F3346001F5918 /* HeadersView.xib */,
 				598A68BE207F3389001F5918 /* AuthorizationView.h */,
 				598A68BF207F3389001F5918 /* AuthorizationView.m */,
@@ -444,9 +456,30 @@
 			isa = PBXGroup;
 			children = (
 				59BA85AE20802BF900F58EBF /* InputParamController.h */,
-				59BA85AF20802BF900F58EBF /* InputParamController.m */,
+				59BA85AF20802BF900F58EBF /* InputParamController.mm */,
 			);
 			path = "Input Param";
+			sourceTree = "<group>";
+		};
+		59BA85BB2080610E00F58EBF /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				59BA85E42080E4A200F58EBF /* Library */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		59BA85E42080E4A200F58EBF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				59BA85E52080E4A200F58EBF /* IGAutoCompletionToolbarLayout.h */,
+				59BA85E62080E4A200F58EBF /* IGAutoCompletionToolbar.h */,
+				59BA85E72080E4A200F58EBF /* IGAutoCompletionToolbarCell.h */,
+				59BA85E82080E4A200F58EBF /* IGAutoCompletionToolbar.m */,
+				59BA85E92080E4A200F58EBF /* IGAutoCompletionToolbarLayout.m */,
+				59BA85EA2080E4A200F58EBF /* IGAutoCompletionToolbarCell.m */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		59E04D89206FFD9E00AB5C2B = {
@@ -568,6 +601,7 @@
 		59F51B21207459AA004AFBE3 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				59BA85BB2080610E00F58EBF /* UICollectionView */,
 				59F5D101207992BF00E961CE /* Class */,
 				59F51B22207459B4004AFBE3 /* UIView */,
 			);
@@ -633,6 +667,8 @@
 				59F5D103207992D800E961CE /* NSString+CppStr.mm */,
 				59BA85B420803FE100F58EBF /* UITextField+Extended.h */,
 				59BA85B520803FE100F58EBF /* UITextField+Extended.m */,
+				59BA85C920808DCD00F58EBF /* UILabel+Extended.h */,
+				59BA85CA20808DCD00F58EBF /* UILabel+Extended.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -896,12 +932,13 @@
 				59F51B2E207470F6004AFBE3 /* WYStoryboardPopoverSegue.m in Sources */,
 				598A689F207F1DFB001F5918 /* PageRequestController.mm in Sources */,
 				59BA85A4208018F700F58EBF /* MZFormSheetPresentationController.m in Sources */,
+				59BA85CB20808DCD00F58EBF /* UILabel+Extended.m in Sources */,
 				59BA8575207F8F1900F58EBF /* FooterCell.m in Sources */,
 				59F5D13B207ABE1B00E961CE /* Exception.cpp in Sources */,
 				59F51B1A20744FDF004AFBE3 /* helper_onc.c in Sources */,
 				59F5D141207AD96500E961CE /* Statement.cpp in Sources */,
 				59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */,
-				59BA85B020802BF900F58EBF /* InputParamController.m in Sources */,
+				59BA85B020802BF900F58EBF /* InputParamController.mm in Sources */,
 				59F51B2F207470F6004AFBE3 /* WYPopoverController.m in Sources */,
 				59BA859F208018F700F58EBF /* MZFormSheetPresentationViewControllerInteractiveAnimator.m in Sources */,
 				598A68C7207F38F0001F5918 /* PageResponseController.mm in Sources */,
@@ -909,7 +946,8 @@
 				598A688D207DD1F1001F5918 /* PathCell.m in Sources */,
 				59F5D14F207B555C00E961CE /* Transaction.cpp in Sources */,
 				59F51AE320738CF2004AFBE3 /* connection.cc in Sources */,
-				598A68BB207F3322001F5918 /* HeadersView.m in Sources */,
+				598A68BB207F3322001F5918 /* HeadersView.mm in Sources */,
+				59BA85EC2080E4A300F58EBF /* IGAutoCompletionToolbarLayout.m in Sources */,
 				598A68D3207F419E001F5918 /* ResponseView.m in Sources */,
 				598A68CE207F407D001F5918 /* TopResView.m in Sources */,
 				59BA857A207F907200F58EBF /* HeaderCell.m in Sources */,
@@ -923,6 +961,7 @@
 				59F5D187207D0A6400E961CE /* Param.cpp in Sources */,
 				59F5D10E20799B7A00E961CE /* JDStatusBarStyle.m in Sources */,
 				59F5D162207C3A7400E961CE /* Project.cpp in Sources */,
+				59BA85EB2080E4A300F58EBF /* IGAutoCompletionToolbar.m in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,
 				59F51AE220738CF2004AFBE3 /* helpers.cc in Sources */,
 				59F5D17B207CAEDE00E961CE /* RequestPopupController.mm in Sources */,
@@ -933,6 +972,7 @@
 				59BA85A7208018F700F58EBF /* MZBlurEffectAdapter.m in Sources */,
 				59BA857F207F934200F58EBF /* QueryParamCell.m in Sources */,
 				59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */,
+				59BA85ED2080E4A300F58EBF /* IGAutoCompletionToolbarCell.m in Sources */,
 				59F5D104207992D800E961CE /* NSString+CppStr.mm in Sources */,
 				59BA85A0208018F700F58EBF /* MZFormSheetContentSizingNavigationControllerAnimator.m in Sources */,
 				59F51AE920738CFA004AFBE3 /* jsoncpp.cpp in Sources */,
