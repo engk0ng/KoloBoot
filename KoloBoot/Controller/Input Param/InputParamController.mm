@@ -36,6 +36,7 @@
     else {
         NSArray *arr = @[@"Accept", @"Accept-Charset", @"Accept-Encoding", @"Accept-Language", @"Accept-Datetime" ,@"Authorization", @"Cache-Control", @"Connection", @"Content-Length", @"Content-MD5", @"Content-Type", @"Cookie",
             @"Date", @"Expect", @"From", @"Forwarded", @"Host", @"If-Match", @"If-Modified-Since", @"If-None-Match", @"If-Range", @"If-Unmodified-Since", @"Max-Forwards", @"Origin", @"Pragma", @"Proxy-Authorization", @"Range", @"Referer", @"TE", @"User-Agent", @"Upgrade", @"Via", @"Warning"];
+        
         [[IGAutoCompletionToolbarCell appearance] setTextColor:[UIColor darkGrayColor]];
         [[IGAutoCompletionToolbarCell appearance] setHighlightedTextColor:self.view.tintColor];
         [[IGAutoCompletionToolbarCell appearance] setBackgroundColor:NAV_DEFAULT_COLOR];
