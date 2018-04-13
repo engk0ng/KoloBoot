@@ -232,3 +232,23 @@ void DBManager::getProjectById(int id, ProjectByIdCallback callback) {
         std::cout << ex.what() << std::endl;
     }
 }
+
+void DBManager::getAllParamByPath(int id, DataParamByPath callback) {
+    try {
+        DataParam result;
+        SQLite::Statement query(*dbase, "select * from param where path_id = ?");
+        query.bind(1, id);
+        while (query.executeStep()) {
+            Model::Param par;
+            par.setPathId(id);
+            par.setId(query.getColumn("id_param").getInt());
+            par.setKey(query.getColumn("key").getString());
+            par.setValue(query.getColumn("value").getString());
+            par.setType(query.getColumn("type").getInt());
+            result.push_back(par);
+        }
+        callback(result);
+    } catch (std::exception& ex) {
+        std::cout << ex.what() << std::endl;
+    }
+}

@@ -29,6 +29,9 @@
     _dbase->getProjectById(_lastId, [&](Model::Project proj){
         _project = proj;
     });
+    
+    _namaRequestField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _pathField.clearButtonMode = UITextFieldViewModeWhileEditing;
     _baseUrlLbl.text = [NSString stringWithFormat:@"Base URL: %s", _project.getBaseUrl().c_str()];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangingFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     // Do any additional setup after loading the view.

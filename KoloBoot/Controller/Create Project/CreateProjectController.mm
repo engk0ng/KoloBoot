@@ -23,6 +23,9 @@
     [super viewDidLoad];
     _nameField.delegate = self;
     _baseUrlField.delegate = self;
+    
+    _nameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _baseUrlField.clearButtonMode = UITextFieldViewModeWhileEditing;
     NSString *lblBtn = @"";
     if (_project.getName().empty()) {
         lblBtn = @"Next";

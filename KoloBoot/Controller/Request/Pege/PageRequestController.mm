@@ -7,11 +7,14 @@
 //
 
 #import "PageRequestController.h"
+#import "MZFormSheetPresentationViewController.h"
 #import "TopView.h"
 #import "QueryParamView.h"
 #import "HeadersView.h"
 #import "AuthorizationView.h"
 #import "Utils.h"
+#import "InputParamController.h"
+#import "MZFormSheetContentSizingNavigationController.h"
 
 @interface PageRequestController ()
 @property (nonatomic, strong) TopView *topView;
@@ -52,6 +55,7 @@
 - (QueryParamView *)queryView {
     if (!_queryView) {
         _queryView = [self.nibBundle loadNibNamed:@"QueryParamView" owner:nil options:nil].firstObject;
+        _queryView.conntrollerDelegate = self;
     }
     return _queryView;
 }
@@ -96,6 +100,35 @@
 
 - (UIView *)segmentedPager:(MXSegmentedPager *)segmentedPager viewForPageAtIndex:(NSInteger)index {
     return @[self.queryView, self.headersView, self.authorizationView][index];
+}
+
+#pragma mark - Helper
+- (UINavigationController *)formSheetControllerWithNavigationController {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    InputParamController *inputVC = [storyboard instantiateViewControllerWithIdentifier:@"InputParamController"];
+    MZFormSheetContentSizingNavigationController *nav = [[MZFormSheetContentSizingNavigationController alloc] initWithRootViewController:inputVC];
+    nav.title = @"Add Value";
+    return nav;
+}
+
+- (void)presentFormSheetControllerWithTransition:(NSInteger)transition {
+    UINavigationController *navigationController = [self formSheetControllerWithNavigationController];
+    MZFormSheetPresentationViewController *formSheetController = [[MZFormSheetPresentationViewController alloc] initWithContentViewController:navigationController];
+    formSheetController.presentationController.shouldDismissOnBackgroundViewTap = NO;
+    formSheetController.contentViewControllerTransitionStyle = (MZFormSheetPresentationTransitionStyle)transition;
+    formSheetController.presentationController.shouldCenterVertically = YES;
+    formSheetController.presentationController.movementActionWhenKeyboardAppears = MZFormSheetActionWhenKeyboardAppearsMoveToTopInset;
+    UIViewController *controllerPresented = [[navigationController viewControllers] firstObject];
+    if ([controllerPresented isKindOfClass:[InputParamController class]]) {
+        InputParamController *inputVC = (InputParamController *)controllerPresented;
+        inputVC.textFieldBecomeFirstResponder = YES;
+    }
+    
+    __weak typeof(formSheetController) weakFormSheet = formSheetController;
+    formSheetController.presentationController.frameConfigurationHandler = ^CGRect(UIView * _Nonnull presentedView, CGRect currentFrame, BOOL isKeyboardVisible) {
+        return CGRectMake(CGRectGetMidX(weakFormSheet.presentationController.containerView.bounds) - (currentFrame.size.width / 2), currentFrame.origin.y, currentFrame.size.width, 190);
+    };
+    [self presentViewController:formSheetController animated:(transition != MZFormSheetPresentationTransitionStyleNone) completion:nil];
 }
 /*
 #pragma mark - Navigation

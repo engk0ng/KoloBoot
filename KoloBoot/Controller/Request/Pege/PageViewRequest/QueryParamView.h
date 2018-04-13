@@ -11,6 +11,7 @@
 #import <vector>
 
 @interface QueryParamView : UIView <UITableViewDelegate, UITableViewDataSource>
+@property (weak) id conntrollerDelegate;
 @property (nonatomic, weak) IBOutlet UITableView *queryTableView;
 @property (nonatomic, assign) std::vector<Model::Param> dataParam;
 @end

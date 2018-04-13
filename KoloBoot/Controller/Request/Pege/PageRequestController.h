@@ -9,5 +9,5 @@
 #import "BasePageController.h"
 
 @interface PageRequestController : BasePageController
-
+- (void)presentFormSheetControllerWithTransition:(NSInteger)transition;
 @end

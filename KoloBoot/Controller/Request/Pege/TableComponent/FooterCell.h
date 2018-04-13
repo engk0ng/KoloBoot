@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FooterCell : UITableViewCell
+@class FooterCell;
 
+@protocol FooterCellDelegate <NSObject>
+@optional
+- (void)showFormInputParam:(FooterCell *)cell;
+@end
+
+@interface FooterCell : UITableViewCell
+@property (weak) id<FooterCellDelegate> delegate;
+- (IBAction)showFormInputParamAction:(id)sender;
 @end

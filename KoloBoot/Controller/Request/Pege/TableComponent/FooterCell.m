@@ -21,4 +21,10 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)showFormInputParamAction:(id)sender {
+    if ([_delegate respondsToSelector:@selector(showFormInputParam:)]) {
+        [_delegate showFormInputParam:self];
+    }
+}
+
 @end
