@@ -15,8 +15,24 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AuthorizationView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Abc-Zc-Wlh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Abc-Zc-Wlh" secondAttribute="trailing" id="Cu3-j5-4AZ"/>
+                <constraint firstItem="Abc-Zc-Wlh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="VWN-rJ-r18"/>
+                <constraint firstItem="Abc-Zc-Wlh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bPe-Uj-zlF"/>
+                <constraint firstItem="Abc-Zc-Wlh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xMo-n8-5oj"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="authoTableView" destination="Abc-Zc-Wlh" id="M9J-Dq-9ZU"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="68.5"/>
         </view>
     </objects>
 </document>

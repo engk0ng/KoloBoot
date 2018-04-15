@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HeaderCell : UITableViewCell
-
+@property (nonatomic, weak) IBOutlet UIButton *settingBtn;
+@property (nonatomic, weak) IBOutlet UILabel *titleLbl;
 @end

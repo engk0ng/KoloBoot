@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AuthorizationView : UIView
-
+@property (nonatomic, weak) IBOutlet UITableView *authoTableView;
 @end

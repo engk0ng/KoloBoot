@@ -57,6 +57,8 @@
 		59BA85EB2080E4A300F58EBF /* IGAutoCompletionToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85E82080E4A200F58EBF /* IGAutoCompletionToolbar.m */; };
 		59BA85EC2080E4A300F58EBF /* IGAutoCompletionToolbarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85E92080E4A200F58EBF /* IGAutoCompletionToolbarLayout.m */; };
 		59BA85ED2080E4A300F58EBF /* IGAutoCompletionToolbarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85EA2080E4A200F58EBF /* IGAutoCompletionToolbarCell.m */; };
+		59BA863C2081B67B00F58EBF /* Auth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59BA863A2081B67B00F58EBF /* Auth.cpp */; };
+		59BA86522082CDAF00F58EBF /* vector_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59BA86502082CDAF00F58EBF /* vector_view.cpp */; };
 		59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */; };
 		59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D99206FFD9E00AB5C2B /* ViewController.mm */; };
 		59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E04D9B206FFD9E00AB5C2B /* Main.storyboard */; };
@@ -203,6 +205,10 @@
 		59BA85E82080E4A200F58EBF /* IGAutoCompletionToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAutoCompletionToolbar.m; sourceTree = "<group>"; };
 		59BA85E92080E4A200F58EBF /* IGAutoCompletionToolbarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAutoCompletionToolbarLayout.m; sourceTree = "<group>"; };
 		59BA85EA2080E4A200F58EBF /* IGAutoCompletionToolbarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAutoCompletionToolbarCell.m; sourceTree = "<group>"; };
+		59BA863A2081B67B00F58EBF /* Auth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Auth.cpp; sourceTree = "<group>"; };
+		59BA863B2081B67B00F58EBF /* Auth.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Auth.hpp; sourceTree = "<group>"; };
+		59BA86502082CDAF00F58EBF /* vector_view.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vector_view.cpp; sourceTree = "<group>"; };
+		59BA86512082CDAF00F58EBF /* vector_view.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vector_view.hpp; sourceTree = "<group>"; };
 		59E04D92206FFD9E00AB5C2B /* KoloBoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoloBoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E04D95206FFD9E00AB5C2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -594,6 +600,8 @@
 				59F5D15A207BC51300E961CE /* DBManager.hpp */,
 				598A6892207E135D001F5918 /* Utils.h */,
 				598A6893207E135D001F5918 /* Utils.mm */,
+				59BA86502082CDAF00F58EBF /* vector_view.cpp */,
+				59BA86512082CDAF00F58EBF /* vector_view.hpp */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -753,6 +761,8 @@
 				59F5D183207CE38500E961CE /* GeneralModel.h */,
 				59F5D185207D0A6400E961CE /* Param.cpp */,
 				59F5D186207D0A6400E961CE /* Param.hpp */,
+				59BA863A2081B67B00F58EBF /* Auth.cpp */,
+				59BA863B2081B67B00F58EBF /* Auth.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -988,7 +998,9 @@
 				598A6899207F0AA1001F5918 /* RequestController.mm in Sources */,
 				59F5D10D20799B7A00E961CE /* JDStatusBarView.m in Sources */,
 				598A6888207DC7FA001F5918 /* ProjectSectionHeaderCell.m in Sources */,
+				59BA863C2081B67B00F58EBF /* Auth.cpp in Sources */,
 				59F5D16E207C6D0500E961CE /* Path.cpp in Sources */,
+				59BA86522082CDAF00F58EBF /* vector_view.cpp in Sources */,
 				59F5D14A207B1EAC00E961CE /* Database.cpp in Sources */,
 				59F5D155207B85F500E961CE /* Backup.cpp in Sources */,
 				59F51B3420747455004AFBE3 /* CreateProjectController.mm in Sources */,

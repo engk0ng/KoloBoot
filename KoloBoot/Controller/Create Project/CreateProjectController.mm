@@ -55,7 +55,9 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    textField.text = @"https://";
+    if ([textField isEqual:_baseUrlField]) {
+       textField.text = @"https://";
+    }
 }
 
 #pragma mark - Helper
