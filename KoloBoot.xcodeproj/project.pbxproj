@@ -23,8 +23,6 @@
 		598A68B8207F32AA001F5918 /* QueryParamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68B7207F32AA001F5918 /* QueryParamView.xib */; };
 		598A68BB207F3322001F5918 /* HeadersView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 598A68BA207F3322001F5918 /* HeadersView.mm */; };
 		598A68BD207F3346001F5918 /* HeadersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68BC207F3346001F5918 /* HeadersView.xib */; };
-		598A68C0207F3389001F5918 /* AuthorizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598A68BF207F3389001F5918 /* AuthorizationView.m */; };
-		598A68C2207F3397001F5918 /* AuthorizationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68C1207F3397001F5918 /* AuthorizationView.xib */; };
 		598A68C7207F38F0001F5918 /* PageResponseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 598A68C5207F38F0001F5918 /* PageResponseController.mm */; };
 		598A68C8207F38F0001F5918 /* PageResponseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598A68C6207F38F0001F5918 /* PageResponseController.xib */; };
 		598A68CB207F3C83001F5918 /* BasePageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 598A68CA207F3C83001F5918 /* BasePageController.mm */; };
@@ -59,6 +57,7 @@
 		59BA85ED2080E4A300F58EBF /* IGAutoCompletionToolbarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA85EA2080E4A200F58EBF /* IGAutoCompletionToolbarCell.m */; };
 		59BA863C2081B67B00F58EBF /* Auth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59BA863A2081B67B00F58EBF /* Auth.cpp */; };
 		59BA86522082CDAF00F58EBF /* vector_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59BA86502082CDAF00F58EBF /* vector_view.cpp */; };
+		59BA866820841ECC00F58EBF /* AuthorizationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA866720841ECC00F58EBF /* AuthorizationView.m */; };
 		59E04D97206FFD9E00AB5C2B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */; };
 		59E04D9A206FFD9E00AB5C2B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59E04D99206FFD9E00AB5C2B /* ViewController.mm */; };
 		59E04D9D206FFD9E00AB5C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E04D9B206FFD9E00AB5C2B /* Main.storyboard */; };
@@ -140,9 +139,6 @@
 		598A68B9207F3322001F5918 /* HeadersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadersView.h; sourceTree = "<group>"; };
 		598A68BA207F3322001F5918 /* HeadersView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HeadersView.mm; sourceTree = "<group>"; };
 		598A68BC207F3346001F5918 /* HeadersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadersView.xib; sourceTree = "<group>"; };
-		598A68BE207F3389001F5918 /* AuthorizationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorizationView.h; sourceTree = "<group>"; };
-		598A68BF207F3389001F5918 /* AuthorizationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorizationView.m; sourceTree = "<group>"; };
-		598A68C1207F3397001F5918 /* AuthorizationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationView.xib; sourceTree = "<group>"; };
 		598A68C4207F38F0001F5918 /* PageResponseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageResponseController.h; sourceTree = "<group>"; };
 		598A68C5207F38F0001F5918 /* PageResponseController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PageResponseController.mm; sourceTree = "<group>"; };
 		598A68C6207F38F0001F5918 /* PageResponseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageResponseController.xib; sourceTree = "<group>"; };
@@ -209,6 +205,8 @@
 		59BA863B2081B67B00F58EBF /* Auth.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Auth.hpp; sourceTree = "<group>"; };
 		59BA86502082CDAF00F58EBF /* vector_view.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vector_view.cpp; sourceTree = "<group>"; };
 		59BA86512082CDAF00F58EBF /* vector_view.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vector_view.hpp; sourceTree = "<group>"; };
+		59BA866620841ECC00F58EBF /* AuthorizationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorizationView.h; sourceTree = "<group>"; };
+		59BA866720841ECC00F58EBF /* AuthorizationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorizationView.m; sourceTree = "<group>"; };
 		59E04D92206FFD9E00AB5C2B /* KoloBoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoloBoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E04D95206FFD9E00AB5C2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59E04D96206FFD9E00AB5C2B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -386,9 +384,8 @@
 				598A68B9207F3322001F5918 /* HeadersView.h */,
 				598A68BA207F3322001F5918 /* HeadersView.mm */,
 				598A68BC207F3346001F5918 /* HeadersView.xib */,
-				598A68BE207F3389001F5918 /* AuthorizationView.h */,
-				598A68BF207F3389001F5918 /* AuthorizationView.m */,
-				598A68C1207F3397001F5918 /* AuthorizationView.xib */,
+				59BA866620841ECC00F58EBF /* AuthorizationView.h */,
+				59BA866720841ECC00F58EBF /* AuthorizationView.m */,
 			);
 			path = PageViewRequest;
 			sourceTree = "<group>";
@@ -855,7 +852,6 @@
 				59BA8580207F934200F58EBF /* QueryParamCell.xib in Resources */,
 				59F5D11C20799B8800E961CE /* icon-info.png in Resources */,
 				598A689A207F0AA1001F5918 /* RequestController.xib in Resources */,
-				598A68C2207F3397001F5918 /* AuthorizationView.xib in Resources */,
 				598A68C8207F38F0001F5918 /* PageResponseController.xib in Resources */,
 				59F5D11E20799B8800E961CE /* icon-error@2x.png in Resources */,
 				59E04D9F206FFD9E00AB5C2B /* Assets.xcassets in Resources */,
@@ -967,9 +963,9 @@
 				59BA859E208018F700F58EBF /* MZFormSheetPresentationViewControllerAnimator.m in Sources */,
 				59F5D1222079E1FE00E961CE /* ProgressView.m in Sources */,
 				59BA85A5208018F700F58EBF /* MZFormSheetPresentationViewControllerSegue.m in Sources */,
-				598A68C0207F3389001F5918 /* AuthorizationView.m in Sources */,
 				59F5D187207D0A6400E961CE /* Param.cpp in Sources */,
 				59F5D10E20799B7A00E961CE /* JDStatusBarStyle.m in Sources */,
+				59BA866820841ECC00F58EBF /* AuthorizationView.m in Sources */,
 				59F5D162207C3A7400E961CE /* Project.cpp in Sources */,
 				59BA85EB2080E4A300F58EBF /* IGAutoCompletionToolbar.m in Sources */,
 				59E04DA5206FFD9E00AB5C2B /* main.m in Sources */,

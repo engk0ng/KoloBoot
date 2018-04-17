@@ -68,11 +68,12 @@
     return _headersView;
 }
 
-- (AuthorizationView *)authorizationView {
+- (UIView *)authorizationView {
     if (!_authorizationView) {
-        _authorizationView = [self.nibBundle loadNibNamed:@"AuthorizationView" owner:nil options:nil].firstObject;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        _authorizationView = [storyboard instantiateViewControllerWithIdentifier:@"AuthorizationView"];
     }
-    return _authorizationView;
+    return _authorizationView.view;
 }
 
 #pragma mark <MXSegmentedPagerDelegate>
