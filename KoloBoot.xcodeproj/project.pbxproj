@@ -142,7 +142,6 @@
 		598A68C4207F38F0001F5918 /* PageResponseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageResponseController.h; sourceTree = "<group>"; };
 		598A68C5207F38F0001F5918 /* PageResponseController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PageResponseController.mm; sourceTree = "<group>"; };
 		598A68C6207F38F0001F5918 /* PageResponseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageResponseController.xib; sourceTree = "<group>"; };
-		598A68C9207F3C83001F5918 /* BasePageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePageController.h; sourceTree = "<group>"; };
 		598A68CA207F3C83001F5918 /* BasePageController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BasePageController.mm; sourceTree = "<group>"; };
 		598A68CC207F407D001F5918 /* TopResView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopResView.h; sourceTree = "<group>"; };
 		598A68CD207F407D001F5918 /* TopResView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopResView.m; sourceTree = "<group>"; };
@@ -299,6 +298,7 @@
 		59F5D183207CE38500E961CE /* GeneralModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralModel.h; sourceTree = "<group>"; };
 		59F5D185207D0A6400E961CE /* Param.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Param.cpp; sourceTree = "<group>"; };
 		59F5D186207D0A6400E961CE /* Param.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Param.hpp; sourceTree = "<group>"; };
+		84C0D35B208EA2E1004F3E0C /* BasePageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePageController.h; sourceTree = "<group>"; };
 		F67867D9676B7DADC8065347 /* libPods-KoloBoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KoloBoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -366,8 +366,8 @@
 				598A68C4207F38F0001F5918 /* PageResponseController.h */,
 				598A68C5207F38F0001F5918 /* PageResponseController.mm */,
 				598A68C6207F38F0001F5918 /* PageResponseController.xib */,
-				598A68C9207F3C83001F5918 /* BasePageController.h */,
 				598A68CA207F3C83001F5918 /* BasePageController.mm */,
+				84C0D35B208EA2E1004F3E0C /* BasePageController.h */,
 			);
 			path = Pege;
 			sourceTree = "<group>";
@@ -797,8 +797,6 @@
 				59E04D8E206FFD9E00AB5C2B /* Sources */,
 				59E04D8F206FFD9E00AB5C2B /* Frameworks */,
 				59E04D90206FFD9E00AB5C2B /* Resources */,
-				CF8235E8A83A6A680CC982F5 /* [CP] Embed Pods Frameworks */,
-				EF3180497F2BC55F8B8B427E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -896,36 +894,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF8235E8A83A6A680CC982F5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF3180497F2BC55F8B8B427E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoloBoot/Pods-KoloBoot-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
